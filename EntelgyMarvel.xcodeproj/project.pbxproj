@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		B451BCC925FBAE9900D5DFE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B451BCC825FBAE9900D5DFE9 /* AppDelegate.swift */; };
-		B451BCCB25FBAE9900D5DFE9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B451BCCA25FBAE9900D5DFE9 /* SceneDelegate.swift */; };
-		B451BCCD25FBAE9900D5DFE9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B451BCCC25FBAE9900D5DFE9 /* ViewController.swift */; };
-		B451BCD025FBAE9A00D5DFE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B451BCCE25FBAE9A00D5DFE9 /* Main.storyboard */; };
 		B451BCD225FBAE9A00D5DFE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B451BCD125FBAE9A00D5DFE9 /* Assets.xcassets */; };
 		B451BCD525FBAE9A00D5DFE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B451BCD325FBAE9A00D5DFE9 /* LaunchScreen.storyboard */; };
 		B451BCE025FBAE9B00D5DFE9 /* EntelgyMarvelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B451BCDF25FBAE9B00D5DFE9 /* EntelgyMarvelTests.swift */; };
 		B451BCEB25FBAE9B00D5DFE9 /* EntelgyMarvelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B451BCEA25FBAE9B00D5DFE9 /* EntelgyMarvelUITests.swift */; };
+		B451BD0025FBB00000D5DFE9 /* AppAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B451BCFF25FBB00000D5DFE9 /* AppAssembly.swift */; };
+		B451BD0A25FBB08400D5DFE9 /* ListCharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B451BD0825FBB08400D5DFE9 /* ListCharactersViewController.swift */; };
+		B451BD0B25FBB08400D5DFE9 /* ListCharactersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B451BD0925FBB08400D5DFE9 /* ListCharactersViewController.xib */; };
+		B451BD3325FBB24E00D5DFE9 /* ListCharactersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B451BD3225FBB24E00D5DFE9 /* ListCharactersPresenter.swift */; };
+		B451BD3C25FBB2F300D5DFE9 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B451BD3B25FBB2F300D5DFE9 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,9 +39,6 @@
 /* Begin PBXFileReference section */
 		B451BCC525FBAE9900D5DFE9 /* EntelgyMarvel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EntelgyMarvel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B451BCC825FBAE9900D5DFE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B451BCCA25FBAE9900D5DFE9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B451BCCC25FBAE9900D5DFE9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B451BCCF25FBAE9A00D5DFE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B451BCD125FBAE9A00D5DFE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B451BCD425FBAE9A00D5DFE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B451BCD625FBAE9A00D5DFE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +48,11 @@
 		B451BCE625FBAE9B00D5DFE9 /* EntelgyMarvelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EntelgyMarvelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B451BCEA25FBAE9B00D5DFE9 /* EntelgyMarvelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntelgyMarvelUITests.swift; sourceTree = "<group>"; };
 		B451BCEC25FBAE9B00D5DFE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B451BCFF25FBB00000D5DFE9 /* AppAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembly.swift; sourceTree = "<group>"; };
+		B451BD0825FBB08400D5DFE9 /* ListCharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCharactersViewController.swift; sourceTree = "<group>"; };
+		B451BD0925FBB08400D5DFE9 /* ListCharactersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCharactersViewController.xib; sourceTree = "<group>"; };
+		B451BD3225FBB24E00D5DFE9 /* ListCharactersPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCharactersPresenter.swift; sourceTree = "<group>"; };
+		B451BD3B25FBB2F300D5DFE9 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +103,11 @@
 		B451BCC725FBAE9900D5DFE9 /* EntelgyMarvel */ = {
 			isa = PBXGroup;
 			children = (
+				B451BD3A25FBB26E00D5DFE9 /* BaseMVP */,
+				B451BD1E25FBB1E700D5DFE9 /* Presenter */,
+				B451BD0725FBB05E00D5DFE9 /* Modules */,
+				B451BCFE25FBAFEC00D5DFE9 /* Core */,
 				B451BCC825FBAE9900D5DFE9 /* AppDelegate.swift */,
-				B451BCCA25FBAE9900D5DFE9 /* SceneDelegate.swift */,
-				B451BCCC25FBAE9900D5DFE9 /* ViewController.swift */,
-				B451BCCE25FBAE9A00D5DFE9 /* Main.storyboard */,
 				B451BCD125FBAE9A00D5DFE9 /* Assets.xcassets */,
 				B451BCD325FBAE9A00D5DFE9 /* LaunchScreen.storyboard */,
 				B451BCD625FBAE9A00D5DFE9 /* Info.plist */,
@@ -126,6 +131,39 @@
 				B451BCEC25FBAE9B00D5DFE9 /* Info.plist */,
 			);
 			path = EntelgyMarvelUITests;
+			sourceTree = "<group>";
+		};
+		B451BCFE25FBAFEC00D5DFE9 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B451BCFF25FBB00000D5DFE9 /* AppAssembly.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		B451BD0725FBB05E00D5DFE9 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				B451BD0825FBB08400D5DFE9 /* ListCharactersViewController.swift */,
+				B451BD0925FBB08400D5DFE9 /* ListCharactersViewController.xib */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		B451BD1E25FBB1E700D5DFE9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B451BD3225FBB24E00D5DFE9 /* ListCharactersPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B451BD3A25FBB26E00D5DFE9 /* BaseMVP */ = {
+			isa = PBXGroup;
+			children = (
+				B451BD3B25FBB2F300D5DFE9 /* BaseViewController.swift */,
+			);
+			path = BaseMVP;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,9 +269,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B451BD0B25FBB08400D5DFE9 /* ListCharactersViewController.xib in Resources */,
 				B451BCD525FBAE9A00D5DFE9 /* LaunchScreen.storyboard in Resources */,
 				B451BCD225FBAE9A00D5DFE9 /* Assets.xcassets in Resources */,
-				B451BCD025FBAE9A00D5DFE9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +296,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B451BCCD25FBAE9900D5DFE9 /* ViewController.swift in Sources */,
+				B451BD3C25FBB2F300D5DFE9 /* BaseViewController.swift in Sources */,
+				B451BD3325FBB24E00D5DFE9 /* ListCharactersPresenter.swift in Sources */,
+				B451BD0A25FBB08400D5DFE9 /* ListCharactersViewController.swift in Sources */,
+				B451BD0025FBB00000D5DFE9 /* AppAssembly.swift in Sources */,
 				B451BCC925FBAE9900D5DFE9 /* AppDelegate.swift in Sources */,
-				B451BCCB25FBAE9900D5DFE9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,14 +336,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B451BCCE25FBAE9A00D5DFE9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B451BCCF25FBAE9A00D5DFE9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B451BCD325FBAE9A00D5DFE9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -446,7 +478,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.icologic.com.iOS.EntelgyMarvel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -465,7 +497,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.icologic.com.iOS.EntelgyMarvel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
