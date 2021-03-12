@@ -17,6 +17,10 @@
 		B451BD0B25FBB08400D5DFE9 /* ListCharactersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B451BD0925FBB08400D5DFE9 /* ListCharactersViewController.xib */; };
 		B451BD3325FBB24E00D5DFE9 /* ListCharactersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B451BD3225FBB24E00D5DFE9 /* ListCharactersPresenter.swift */; };
 		B451BD3C25FBB2F300D5DFE9 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B451BD3B25FBB2F300D5DFE9 /* BaseViewController.swift */; };
+		B451BD4525FBB40700D5DFE9 /* BaseProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B451BD4425FBB40700D5DFE9 /* BaseProtocols.swift */; };
+		B451BD4B25FBB4D900D5DFE9 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B451BD4A25FBB4D900D5DFE9 /* UIViewController+Extensions.swift */; };
+		B451BD5325FBB50300D5DFE9 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B451BD5225FBB50300D5DFE9 /* BasePresenter.swift */; };
+		B451BD5825FBB5C900D5DFE9 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B451BD5725FBB5C900D5DFE9 /* BaseRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,10 @@
 		B451BD0925FBB08400D5DFE9 /* ListCharactersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCharactersViewController.xib; sourceTree = "<group>"; };
 		B451BD3225FBB24E00D5DFE9 /* ListCharactersPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCharactersPresenter.swift; sourceTree = "<group>"; };
 		B451BD3B25FBB2F300D5DFE9 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		B451BD4425FBB40700D5DFE9 /* BaseProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProtocols.swift; sourceTree = "<group>"; };
+		B451BD4A25FBB4D900D5DFE9 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		B451BD5225FBB50300D5DFE9 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		B451BD5725FBB5C900D5DFE9 /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +111,7 @@
 		B451BCC725FBAE9900D5DFE9 /* EntelgyMarvel */ = {
 			isa = PBXGroup;
 			children = (
+				B451BD4925FBB4C000D5DFE9 /* Extensions */,
 				B451BD3A25FBB26E00D5DFE9 /* BaseMVP */,
 				B451BD1E25FBB1E700D5DFE9 /* Presenter */,
 				B451BD0725FBB05E00D5DFE9 /* Modules */,
@@ -162,8 +171,19 @@
 			isa = PBXGroup;
 			children = (
 				B451BD3B25FBB2F300D5DFE9 /* BaseViewController.swift */,
+				B451BD5225FBB50300D5DFE9 /* BasePresenter.swift */,
+				B451BD5725FBB5C900D5DFE9 /* BaseRouter.swift */,
+				B451BD4425FBB40700D5DFE9 /* BaseProtocols.swift */,
 			);
 			path = BaseMVP;
+			sourceTree = "<group>";
+		};
+		B451BD4925FBB4C000D5DFE9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B451BD4A25FBB4D900D5DFE9 /* UIViewController+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,7 +317,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B451BD3C25FBB2F300D5DFE9 /* BaseViewController.swift in Sources */,
+				B451BD5825FBB5C900D5DFE9 /* BaseRouter.swift in Sources */,
+				B451BD5325FBB50300D5DFE9 /* BasePresenter.swift in Sources */,
 				B451BD3325FBB24E00D5DFE9 /* ListCharactersPresenter.swift in Sources */,
+				B451BD4525FBB40700D5DFE9 /* BaseProtocols.swift in Sources */,
+				B451BD4B25FBB4D900D5DFE9 /* UIViewController+Extensions.swift in Sources */,
 				B451BD0A25FBB08400D5DFE9 /* ListCharactersViewController.swift in Sources */,
 				B451BD0025FBB00000D5DFE9 /* AppAssembly.swift in Sources */,
 				B451BCC925FBAE9900D5DFE9 /* AppDelegate.swift in Sources */,
