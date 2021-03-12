@@ -21,6 +21,7 @@
 		B451BD4B25FBB4D900D5DFE9 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B451BD4A25FBB4D900D5DFE9 /* UIViewController+Extensions.swift */; };
 		B451BD5325FBB50300D5DFE9 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B451BD5225FBB50300D5DFE9 /* BasePresenter.swift */; };
 		B451BD5825FBB5C900D5DFE9 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B451BD5725FBB5C900D5DFE9 /* BaseRouter.swift */; };
+		B451BD5D25FBB67200D5DFE9 /* BaseAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B451BD5C25FBB67200D5DFE9 /* BaseAssembly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		B451BD4A25FBB4D900D5DFE9 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		B451BD5225FBB50300D5DFE9 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 		B451BD5725FBB5C900D5DFE9 /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
+		B451BD5C25FBB67200D5DFE9 /* BaseAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAssembly.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 				B451BD5225FBB50300D5DFE9 /* BasePresenter.swift */,
 				B451BD5725FBB5C900D5DFE9 /* BaseRouter.swift */,
 				B451BD4425FBB40700D5DFE9 /* BaseProtocols.swift */,
+				B451BD5C25FBB67200D5DFE9 /* BaseAssembly.swift */,
 			);
 			path = BaseMVP;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				B451BD3325FBB24E00D5DFE9 /* ListCharactersPresenter.swift in Sources */,
 				B451BD4525FBB40700D5DFE9 /* BaseProtocols.swift in Sources */,
 				B451BD4B25FBB4D900D5DFE9 /* UIViewController+Extensions.swift in Sources */,
+				B451BD5D25FBB67200D5DFE9 /* BaseAssembly.swift in Sources */,
 				B451BD0A25FBB08400D5DFE9 /* ListCharactersViewController.swift in Sources */,
 				B451BD0025FBB00000D5DFE9 /* AppAssembly.swift in Sources */,
 				B451BCC925FBAE9900D5DFE9 /* AppDelegate.swift in Sources */,

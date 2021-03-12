@@ -13,4 +13,12 @@ class BasePresenter {
     weak var baseView: BaseViewProtocol?
     var baseRouter: BaseRouterProtocol?
     
+    required init() {}
+    
+}
+
+extension BasePresenter: BaseRouterDelegate {
+    func navigationDone() {
+        //
+    }
 }

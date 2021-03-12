@@ -11,8 +11,10 @@ import UIKit
 class BaseRouter {
     
     // Declared weak for the ARC to destroy them.
-     weak var baseView: UIViewController?
+    weak var baseView: UIViewController?
     weak var delegate: BaseRouterDelegate?
+    
+    required init() {}
     
     // MARK: PRIVATE BASE
     public func rootViewController(_ viewControllerToPresent: UIViewController, animated flag: Bool) {
