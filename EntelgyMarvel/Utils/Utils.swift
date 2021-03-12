@@ -52,7 +52,7 @@ class Helpers {
     func showPostersInCollectionView(_ myCollectionView : UICollectionView) -> CGSize{
         let flowLayout = UICollectionViewFlowLayout()
         let cellSpacing = CGFloat(1)
-        let leftRightMargin = CGFloat(20)
+        let leftRightMargin = CGFloat(10)
         let numColumns = CGFloat(2)
         let totalCellSpace = cellSpacing * (numColumns - 1)
         let screenWidth = UIScreen.main.bounds.width

@@ -19,7 +19,7 @@ class StoreManager: ServiceManagerProtocol {
         }
         self.loadURLAndDecode(url: url, params:[
             "orderBy": "name",
-            "limit": "15",
+            "limit": "35",
             "hash": "\(Helpers().getHash())",
             "ts": "\(Helpers().getTimeStamp())"
         ], completion: completion)

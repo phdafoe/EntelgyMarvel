@@ -20,11 +20,11 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Dd7-lR-wlQ" userLabel="placeholder">
                         <rect key="frame" x="0.0" y="0.0" width="180" height="270"/>
                     </imageView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="degradado" translatesAutoresizingMaskIntoConstraints="NO" id="EKO-AR-tLl">
-                        <rect key="frame" x="0.0" y="200" width="180" height="70"/>
-                    </imageView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AQI-DP-lsE">
                         <rect key="frame" x="0.0" y="0.0" width="180" height="270"/>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="degradado" translatesAutoresizingMaskIntoConstraints="NO" id="EKO-AR-tLl">
+                        <rect key="frame" x="0.0" y="200" width="180" height="70"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mID-Fz-2tF">
                         <rect key="frame" x="8" y="241" width="164" height="21"/>
@@ -53,7 +53,9 @@
             </constraints>
             <connections>
                 <outlet property="myCharacter" destination="mID-Fz-2tF" id="Wm2-9B-Xge"/>
+                <outlet property="myDegradado" destination="EKO-AR-tLl" id="fJa-aw-eQm"/>
                 <outlet property="myImagePoster" destination="AQI-DP-lsE" id="JsK-9Y-6lg"/>
+                <outlet property="myPlaceHolder" destination="Dd7-lR-wlQ" id="VF7-rk-E7O"/>
             </connections>
             <point key="canvasLocation" x="140.57971014492756" y="129.91071428571428"/>
         </collectionViewCell>
