@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B451BCC925FBAE9900D5DFE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B451BCC825FBAE9900D5DFE9 /* AppDelegate.swift */; };
+		B451BCCB25FBAE9900D5DFE9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B451BCCA25FBAE9900D5DFE9 /* SceneDelegate.swift */; };
+		B451BCCD25FBAE9900D5DFE9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B451BCCC25FBAE9900D5DFE9 /* ViewController.swift */; };
+		B451BCD025FBAE9A00D5DFE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B451BCCE25FBAE9A00D5DFE9 /* Main.storyboard */; };
+		B451BCD225FBAE9A00D5DFE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B451BCD125FBAE9A00D5DFE9 /* Assets.xcassets */; };
+		B451BCD525FBAE9A00D5DFE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B451BCD325FBAE9A00D5DFE9 /* LaunchScreen.storyboard */; };
+		B451BCE025FBAE9B00D5DFE9 /* EntelgyMarvelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B451BCDF25FBAE9B00D5DFE9 /* EntelgyMarvelTests.swift */; };
+		B451BCEB25FBAE9B00D5DFE9 /* EntelgyMarvelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B451BCEA25FBAE9B00D5DFE9 /* EntelgyMarvelUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B451BCDC25FBAE9B00D5DFE9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B451BCBD25FBAE9900D5DFE9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B451BCC425FBAE9900D5DFE9;
+			remoteInfo = EntelgyMarvel;
+		};
+		B451BCE725FBAE9B00D5DFE9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B451BCBD25FBAE9900D5DFE9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B451BCC425FBAE9900D5DFE9;
+			remoteInfo = EntelgyMarvel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B451BCC525FBAE9900D5DFE9 /* EntelgyMarvel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EntelgyMarvel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B451BCC825FBAE9900D5DFE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B451BCCA25FBAE9900D5DFE9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B451BCCC25FBAE9900D5DFE9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B451BCCF25FBAE9A00D5DFE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B451BCD125FBAE9A00D5DFE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B451BCD425FBAE9A00D5DFE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B451BCD625FBAE9A00D5DFE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B451BCDB25FBAE9B00D5DFE9 /* EntelgyMarvelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EntelgyMarvelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B451BCDF25FBAE9B00D5DFE9 /* EntelgyMarvelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntelgyMarvelTests.swift; sourceTree = "<group>"; };
+		B451BCE125FBAE9B00D5DFE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B451BCE625FBAE9B00D5DFE9 /* EntelgyMarvelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EntelgyMarvelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B451BCEA25FBAE9B00D5DFE9 /* EntelgyMarvelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntelgyMarvelUITests.swift; sourceTree = "<group>"; };
+		B451BCEC25FBAE9B00D5DFE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B451BCC225FBAE9900D5DFE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B451BCD825FBAE9B00D5DFE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B451BCE325FBAE9B00D5DFE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B451BCBC25FBAE9900D5DFE9 = {
+			isa = PBXGroup;
+			children = (
+				B451BCC725FBAE9900D5DFE9 /* EntelgyMarvel */,
+				B451BCDE25FBAE9B00D5DFE9 /* EntelgyMarvelTests */,
+				B451BCE925FBAE9B00D5DFE9 /* EntelgyMarvelUITests */,
+				B451BCC625FBAE9900D5DFE9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B451BCC625FBAE9900D5DFE9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B451BCC525FBAE9900D5DFE9 /* EntelgyMarvel.app */,
+				B451BCDB25FBAE9B00D5DFE9 /* EntelgyMarvelTests.xctest */,
+				B451BCE625FBAE9B00D5DFE9 /* EntelgyMarvelUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B451BCC725FBAE9900D5DFE9 /* EntelgyMarvel */ = {
+			isa = PBXGroup;
+			children = (
+				B451BCC825FBAE9900D5DFE9 /* AppDelegate.swift */,
+				B451BCCA25FBAE9900D5DFE9 /* SceneDelegate.swift */,
+				B451BCCC25FBAE9900D5DFE9 /* ViewController.swift */,
+				B451BCCE25FBAE9A00D5DFE9 /* Main.storyboard */,
+				B451BCD125FBAE9A00D5DFE9 /* Assets.xcassets */,
+				B451BCD325FBAE9A00D5DFE9 /* LaunchScreen.storyboard */,
+				B451BCD625FBAE9A00D5DFE9 /* Info.plist */,
+			);
+			path = EntelgyMarvel;
+			sourceTree = "<group>";
+		};
+		B451BCDE25FBAE9B00D5DFE9 /* EntelgyMarvelTests */ = {
+			isa = PBXGroup;
+			children = (
+				B451BCDF25FBAE9B00D5DFE9 /* EntelgyMarvelTests.swift */,
+				B451BCE125FBAE9B00D5DFE9 /* Info.plist */,
+			);
+			path = EntelgyMarvelTests;
+			sourceTree = "<group>";
+		};
+		B451BCE925FBAE9B00D5DFE9 /* EntelgyMarvelUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B451BCEA25FBAE9B00D5DFE9 /* EntelgyMarvelUITests.swift */,
+				B451BCEC25FBAE9B00D5DFE9 /* Info.plist */,
+			);
+			path = EntelgyMarvelUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B451BCC425FBAE9900D5DFE9 /* EntelgyMarvel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B451BCEF25FBAE9B00D5DFE9 /* Build configuration list for PBXNativeTarget "EntelgyMarvel" */;
+			buildPhases = (
+				B451BCC125FBAE9900D5DFE9 /* Sources */,
+				B451BCC225FBAE9900D5DFE9 /* Frameworks */,
+				B451BCC325FBAE9900D5DFE9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EntelgyMarvel;
+			productName = EntelgyMarvel;
+			productReference = B451BCC525FBAE9900D5DFE9 /* EntelgyMarvel.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B451BCDA25FBAE9B00D5DFE9 /* EntelgyMarvelTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B451BCF225FBAE9B00D5DFE9 /* Build configuration list for PBXNativeTarget "EntelgyMarvelTests" */;
+			buildPhases = (
+				B451BCD725FBAE9B00D5DFE9 /* Sources */,
+				B451BCD825FBAE9B00D5DFE9 /* Frameworks */,
+				B451BCD925FBAE9B00D5DFE9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B451BCDD25FBAE9B00D5DFE9 /* PBXTargetDependency */,
+			);
+			name = EntelgyMarvelTests;
+			productName = EntelgyMarvelTests;
+			productReference = B451BCDB25FBAE9B00D5DFE9 /* EntelgyMarvelTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B451BCE525FBAE9B00D5DFE9 /* EntelgyMarvelUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B451BCF525FBAE9B00D5DFE9 /* Build configuration list for PBXNativeTarget "EntelgyMarvelUITests" */;
+			buildPhases = (
+				B451BCE225FBAE9B00D5DFE9 /* Sources */,
+				B451BCE325FBAE9B00D5DFE9 /* Frameworks */,
+				B451BCE425FBAE9B00D5DFE9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B451BCE825FBAE9B00D5DFE9 /* PBXTargetDependency */,
+			);
+			name = EntelgyMarvelUITests;
+			productName = EntelgyMarvelUITests;
+			productReference = B451BCE625FBAE9B00D5DFE9 /* EntelgyMarvelUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B451BCBD25FBAE9900D5DFE9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					B451BCC425FBAE9900D5DFE9 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					B451BCDA25FBAE9B00D5DFE9 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = B451BCC425FBAE9900D5DFE9;
+					};
+					B451BCE525FBAE9B00D5DFE9 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = B451BCC425FBAE9900D5DFE9;
+					};
+				};
+			};
+			buildConfigurationList = B451BCC025FBAE9900D5DFE9 /* Build configuration list for PBXProject "EntelgyMarvel" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B451BCBC25FBAE9900D5DFE9;
+			productRefGroup = B451BCC625FBAE9900D5DFE9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B451BCC425FBAE9900D5DFE9 /* EntelgyMarvel */,
+				B451BCDA25FBAE9B00D5DFE9 /* EntelgyMarvelTests */,
+				B451BCE525FBAE9B00D5DFE9 /* EntelgyMarvelUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B451BCC325FBAE9900D5DFE9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B451BCD525FBAE9A00D5DFE9 /* LaunchScreen.storyboard in Resources */,
+				B451BCD225FBAE9A00D5DFE9 /* Assets.xcassets in Resources */,
+				B451BCD025FBAE9A00D5DFE9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B451BCD925FBAE9B00D5DFE9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B451BCE425FBAE9B00D5DFE9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B451BCC125FBAE9900D5DFE9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B451BCCD25FBAE9900D5DFE9 /* ViewController.swift in Sources */,
+				B451BCC925FBAE9900D5DFE9 /* AppDelegate.swift in Sources */,
+				B451BCCB25FBAE9900D5DFE9 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B451BCD725FBAE9B00D5DFE9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B451BCE025FBAE9B00D5DFE9 /* EntelgyMarvelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B451BCE225FBAE9B00D5DFE9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B451BCEB25FBAE9B00D5DFE9 /* EntelgyMarvelUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B451BCDD25FBAE9B00D5DFE9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B451BCC425FBAE9900D5DFE9 /* EntelgyMarvel */;
+			targetProxy = B451BCDC25FBAE9B00D5DFE9 /* PBXContainerItemProxy */;
+		};
+		B451BCE825FBAE9B00D5DFE9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B451BCC425FBAE9900D5DFE9 /* EntelgyMarvel */;
+			targetProxy = B451BCE725FBAE9B00D5DFE9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B451BCCE25FBAE9A00D5DFE9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B451BCCF25FBAE9A00D5DFE9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B451BCD325FBAE9A00D5DFE9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B451BCD425FBAE9A00D5DFE9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B451BCED25FBAE9B00D5DFE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B451BCEE25FBAE9B00D5DFE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B451BCF025FBAE9B00D5DFE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2C7W4RF846;
+				INFOPLIST_FILE = EntelgyMarvel/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.icologic.com.iOS.EntelgyMarvel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B451BCF125FBAE9B00D5DFE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2C7W4RF846;
+				INFOPLIST_FILE = EntelgyMarvel/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.icologic.com.iOS.EntelgyMarvel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B451BCF325FBAE9B00D5DFE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2C7W4RF846;
+				INFOPLIST_FILE = EntelgyMarvelTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.icologic.com.iOS.EntelgyMarvelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EntelgyMarvel.app/EntelgyMarvel";
+			};
+			name = Debug;
+		};
+		B451BCF425FBAE9B00D5DFE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2C7W4RF846;
+				INFOPLIST_FILE = EntelgyMarvelTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.icologic.com.iOS.EntelgyMarvelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EntelgyMarvel.app/EntelgyMarvel";
+			};
+			name = Release;
+		};
+		B451BCF625FBAE9B00D5DFE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2C7W4RF846;
+				INFOPLIST_FILE = EntelgyMarvelUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.icologic.com.iOS.EntelgyMarvelUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EntelgyMarvel;
+			};
+			name = Debug;
+		};
+		B451BCF725FBAE9B00D5DFE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2C7W4RF846;
+				INFOPLIST_FILE = EntelgyMarvelUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.icologic.com.iOS.EntelgyMarvelUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EntelgyMarvel;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B451BCC025FBAE9900D5DFE9 /* Build configuration list for PBXProject "EntelgyMarvel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B451BCED25FBAE9B00D5DFE9 /* Debug */,
+				B451BCEE25FBAE9B00D5DFE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B451BCEF25FBAE9B00D5DFE9 /* Build configuration list for PBXNativeTarget "EntelgyMarvel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B451BCF025FBAE9B00D5DFE9 /* Debug */,
+				B451BCF125FBAE9B00D5DFE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B451BCF225FBAE9B00D5DFE9 /* Build configuration list for PBXNativeTarget "EntelgyMarvelTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B451BCF325FBAE9B00D5DFE9 /* Debug */,
+				B451BCF425FBAE9B00D5DFE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B451BCF525FBAE9B00D5DFE9 /* Build configuration list for PBXNativeTarget "EntelgyMarvelUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B451BCF625FBAE9B00D5DFE9 /* Debug */,
+				B451BCF725FBAE9B00D5DFE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B451BCBD25FBAE9900D5DFE9 /* Project object */;
+}
