@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		B416E00525FBC0A7008CCF7A /* BaseMVP.swift in Sources */ = {isa = PBXBuildFile; fileRef = B416E00425FBC0A7008CCF7A /* BaseMVP.swift */; };
+		B416E00E25FBC4C0008CCF7A /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B416E00D25FBC4C0008CCF7A /* ServiceManager.swift */; };
+		B416E01325FBC4CA008CCF7A /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B416E01225FBC4CA008CCF7A /* StoreManager.swift */; };
+		B416E01925FBC699008CCF7A /* ListCharactersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B416E01825FBC699008CCF7A /* ListCharactersModel.swift */; };
 		B451BCC925FBAE9900D5DFE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B451BCC825FBAE9900D5DFE9 /* AppDelegate.swift */; };
 		B451BCD225FBAE9A00D5DFE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B451BCD125FBAE9A00D5DFE9 /* Assets.xcassets */; };
 		B451BCD525FBAE9A00D5DFE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B451BCD325FBAE9A00D5DFE9 /* LaunchScreen.storyboard */; };
@@ -42,6 +45,9 @@
 
 /* Begin PBXFileReference section */
 		B416E00425FBC0A7008CCF7A /* BaseMVP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMVP.swift; sourceTree = "<group>"; };
+		B416E00D25FBC4C0008CCF7A /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		B416E01225FBC4CA008CCF7A /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
+		B416E01825FBC699008CCF7A /* ListCharactersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCharactersModel.swift; sourceTree = "<group>"; };
 		B451BCC525FBAE9900D5DFE9 /* EntelgyMarvel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EntelgyMarvel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B451BCC825FBAE9900D5DFE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B451BCD125FBAE9A00D5DFE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -88,11 +94,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B416E00C25FBC438008CCF7A /* Managers */ = {
+		B416E00C25FBC438008CCF7A /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				B416E00D25FBC4C0008CCF7A /* ServiceManager.swift */,
+				B416E01225FBC4CA008CCF7A /* StoreManager.swift */,
 			);
-			path = Managers;
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B416E01725FBC684008CCF7A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B416E01825FBC699008CCF7A /* ListCharactersModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		B451BCBC25FBAE9900D5DFE9 = {
@@ -118,7 +134,8 @@
 		B451BCC725FBAE9900D5DFE9 /* EntelgyMarvel */ = {
 			isa = PBXGroup;
 			children = (
-				B416E00C25FBC438008CCF7A /* Managers */,
+				B416E01725FBC684008CCF7A /* Models */,
+				B416E00C25FBC438008CCF7A /* Services */,
 				B451BD6F25FBBB5700D5DFE9 /* Utils */,
 				B451BD6125FBB9BD00D5DFE9 /* Coordinators */,
 				B451BD4925FBB4C000D5DFE9 /* Extensions */,
@@ -335,12 +352,15 @@
 				B416E00525FBC0A7008CCF7A /* BaseMVP.swift in Sources */,
 				B451BD6325FBB9D500D5DFE9 /* ListCharactersCoordinator.swift in Sources */,
 				B451BD3325FBB24E00D5DFE9 /* ListCharactersPresenter.swift in Sources */,
+				B416E01325FBC4CA008CCF7A /* StoreManager.swift in Sources */,
 				B451BD4B25FBB4D900D5DFE9 /* UIViewController+Extensions.swift in Sources */,
 				B451BD7125FBBCC400D5DFE9 /* Utils.swift in Sources */,
 				B451BD0A25FBB08400D5DFE9 /* ListCharactersViewController.swift in Sources */,
 				B451BD0025FBB00000D5DFE9 /* AppAssembly.swift in Sources */,
 				B451BCC925FBAE9900D5DFE9 /* AppDelegate.swift in Sources */,
+				B416E01925FBC699008CCF7A /* ListCharactersModel.swift in Sources */,
 				B451BD7D25FBBE2500D5DFE9 /* ListCharactersRouter.swift in Sources */,
+				B416E00E25FBC4C0008CCF7A /* ServiceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
