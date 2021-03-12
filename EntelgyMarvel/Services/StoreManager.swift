@@ -58,7 +58,7 @@ class StoreManager: ServiceManagerProtocol {
                 return
             }
             do {
-                let decodeResponse = try JSONDecoder().decode(D.self, from: dataDes)
+                let decodeResponse = try Utils.BaseURL().jsonDecoder.decode(D.self, from: dataDes)
                 self.executeCompletionHandlerInMainThread(whit: .success(decodeResponse), completion: completion)
             } catch {
                 self.executeCompletionHandlerInMainThread(whit: .failure(.serializationError), completion: completion)

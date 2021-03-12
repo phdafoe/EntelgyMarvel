@@ -113,6 +113,17 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		B416E02325FBD615008CCF7A /* ListCharactersVC */ = {
+			isa = PBXGroup;
+			children = (
+				B451BD0825FBB08400D5DFE9 /* ListCharactersViewController.swift */,
+				B451BD0925FBB08400D5DFE9 /* ListCharactersViewController.xib */,
+				B451BD3225FBB24E00D5DFE9 /* ListCharactersPresenter.swift */,
+				B451BD7C25FBBE2500D5DFE9 /* ListCharactersRouter.swift */,
+			);
+			path = ListCharactersVC;
+			sourceTree = "<group>";
+		};
 		B451BCBC25FBAE9900D5DFE9 = {
 			isa = PBXGroup;
 			children = (
@@ -181,10 +192,7 @@
 		B451BD0725FBB05E00D5DFE9 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				B451BD0825FBB08400D5DFE9 /* ListCharactersViewController.swift */,
-				B451BD0925FBB08400D5DFE9 /* ListCharactersViewController.xib */,
-				B451BD3225FBB24E00D5DFE9 /* ListCharactersPresenter.swift */,
-				B451BD7C25FBBE2500D5DFE9 /* ListCharactersRouter.swift */,
+				B416E02325FBD615008CCF7A /* ListCharactersVC */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
