@@ -8,7 +8,7 @@
 import UIKit
 
 protocol ListCharactersViewPresenterInterface: ViewPresenterInterface {
-
+    func getDataFromWeb(data: [ResultCharacter]?)
 }
 
 class ListCharactersViewController: UIViewController, ViewInterface {
@@ -17,14 +17,15 @@ class ListCharactersViewController: UIViewController, ViewInterface {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.presenter.loadMovies(whit: .characters)
     }
-
-
-    
 
 }
 
 extension ListCharactersViewController: ListCharactersViewPresenterInterface {
-
+    func getDataFromWeb(data: [ResultCharacter]?) {
+        print("\(data?.count ?? 0)")
+    }
+  
 }
+

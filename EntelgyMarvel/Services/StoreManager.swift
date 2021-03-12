@@ -13,14 +13,15 @@ class StoreManager: ServiceManagerProtocol {
     private init() {}
     
     func fetchListCharacters(from endpoint: ListEndPoint, completion: @escaping (Result<ListCharacteresModel, ApiError>) -> ()) {
-        guard let url = URL(string: "\(Utils.BaseURL().baseAPIURL)/") else {
+        guard let url = URL(string: "\(Utils.BaseURL().baseAPIURL)/\(endpoint)") else {
             completion(.failure(.invalidEndpoint))
             return
         }
         self.loadURLAndDecode(url: url, params:[
             "orderBy": "name",
             "limit": "15",
-            "offset": "1490"
+            "hash": "\(Helpers().getHash())",
+            "ts": "\(Helpers().getTimeStamp())"
         ], completion: completion)
     }
     
@@ -30,7 +31,7 @@ class StoreManager: ServiceManagerProtocol {
             return
         }
         
-        var queryItemsArray = [URLQueryItem(name: "api_key", value: Utils.BaseURL().apiKey)]
+        var queryItemsArray = [URLQueryItem(name: "apikey", value: Utils.BaseURL().publicApiKey)]
         if let paramsDes = params {
             queryItemsArray.append(contentsOf: paramsDes.map { URLQueryItem(name: $0.key, value: $0.value)})
         }
@@ -57,7 +58,7 @@ class StoreManager: ServiceManagerProtocol {
                 return
             }
             do {
-                let decodeResponse = try Utils.BaseURL().jsonDecoder.decode(D.self, from: dataDes)
+                let decodeResponse = try JSONDecoder().decode(D.self, from: dataDes)
                 self.executeCompletionHandlerInMainThread(whit: .success(decodeResponse), completion: completion)
             } catch {
                 self.executeCompletionHandlerInMainThread(whit: .failure(.serializationError), completion: completion)
