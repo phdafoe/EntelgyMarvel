@@ -150,6 +150,13 @@ struct Thumbnail: EntityInterface, Decodable  {
         case path = "path"
         case thumbnailExtension = "extension"
     }
+    
+    var pathURL: URL? {
+        if path != nil {
+            return URL(string: "\(path ?? "").jpg")!
+        }
+        return nil
+    }
 }
 
 // MARK: - URLElement

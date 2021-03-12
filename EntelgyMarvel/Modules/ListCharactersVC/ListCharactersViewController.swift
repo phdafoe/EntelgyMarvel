@@ -8,24 +8,60 @@
 import UIKit
 
 protocol ListCharactersViewPresenterInterface: ViewPresenterInterface {
-    func getDataFromWeb(data: [ResultCharacter]?)
+    func reloadData()
 }
 
 class ListCharactersViewController: UIViewController, ViewInterface {
     
     var presenter: ListCharactersPresenterViewInterface!
     
+    @IBOutlet weak var myCollectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.myCollectionView.delegate = self
+        self.myCollectionView.dataSource = self
+        self.myCollectionView.register(UINib(nibName: CharacterCollectionViewCell.defaultReuseIdentifier, bundle: nil), forCellWithReuseIdentifier: CharacterCollectionViewCell.defaultReuseIdentifier)
         self.presenter.loadMovies(whit: .characters)
     }
-
+    
 }
 
 extension ListCharactersViewController: ListCharactersViewPresenterInterface {
-    func getDataFromWeb(data: [ResultCharacter]?) {
-        print("\(data?.count ?? 0)")
+   
+    internal func reloadData() {
+        self.myCollectionView.reloadData()
     }
-  
 }
+
+extension ListCharactersViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if let cellsForRows = self.presenter.getNumberOfRowCell() {
+            return cellsForRows
+        }
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = self.myCollectionView.dequeueReusableCell(withReuseIdentifier: CharacterCollectionViewCell.defaultReuseIdentifier, for: indexPath) as! CharacterCollectionViewCell
+        if let dataModel = self.presenter.getModelDataCell(index: indexPath.row) {
+            cell.setupCell(data: dataModel)
+        }
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return Helpers().showPostersInCollectionView(myCollectionView)
+    }
+}
+
 

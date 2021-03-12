@@ -12,6 +12,11 @@
 		B416E01325FBC4CA008CCF7A /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B416E01225FBC4CA008CCF7A /* StoreManager.swift */; };
 		B416E01925FBC699008CCF7A /* ListCharactersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B416E01825FBC699008CCF7A /* ListCharactersModel.swift */; };
 		B416E01F25FBD272008CCF7A /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B416E01E25FBD272008CCF7A /* CryptoSwift */; };
+		B416E02725FBD666008CCF7A /* DetailCharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B416E02525FBD666008CCF7A /* DetailCharacterViewController.swift */; };
+		B416E02825FBD666008CCF7A /* DetailCharacterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B416E02625FBD666008CCF7A /* DetailCharacterViewController.xib */; };
+		B416E02D25FBD8E0008CCF7A /* DetailCharacterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B416E02C25FBD8E0008CCF7A /* DetailCharacterPresenter.swift */; };
+		B416E03225FBD8EC008CCF7A /* DetailCharacterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B416E03125FBD8EC008CCF7A /* DetailCharacterRouter.swift */; };
+		B416E03725FBD93F008CCF7A /* DetailCharacterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B416E03625FBD93F008CCF7A /* DetailCharacterCoordinator.swift */; };
 		B451BCC925FBAE9900D5DFE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B451BCC825FBAE9900D5DFE9 /* AppDelegate.swift */; };
 		B451BCD225FBAE9A00D5DFE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B451BCD125FBAE9A00D5DFE9 /* Assets.xcassets */; };
 		B451BCD525FBAE9A00D5DFE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B451BCD325FBAE9A00D5DFE9 /* LaunchScreen.storyboard */; };
@@ -25,6 +30,9 @@
 		B451BD6325FBB9D500D5DFE9 /* ListCharactersCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B451BD6225FBB9D500D5DFE9 /* ListCharactersCoordinator.swift */; };
 		B451BD7125FBBCC400D5DFE9 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B451BD7025FBBCC400D5DFE9 /* Utils.swift */; };
 		B451BD7D25FBBE2500D5DFE9 /* ListCharactersRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B451BD7C25FBBE2500D5DFE9 /* ListCharactersRouter.swift */; };
+		B49476A625FBF30C005751C0 /* CharacterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49476A425FBF30C005751C0 /* CharacterCollectionViewCell.swift */; };
+		B49476A725FBF30C005751C0 /* CharacterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B49476A525FBF30C005751C0 /* CharacterCollectionViewCell.xib */; };
+		B49476AD25FBF6A9005751C0 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B49476AC25FBF6A9005751C0 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +57,11 @@
 		B416E00D25FBC4C0008CCF7A /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		B416E01225FBC4CA008CCF7A /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
 		B416E01825FBC699008CCF7A /* ListCharactersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCharactersModel.swift; sourceTree = "<group>"; };
+		B416E02525FBD666008CCF7A /* DetailCharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCharacterViewController.swift; sourceTree = "<group>"; };
+		B416E02625FBD666008CCF7A /* DetailCharacterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailCharacterViewController.xib; sourceTree = "<group>"; };
+		B416E02C25FBD8E0008CCF7A /* DetailCharacterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCharacterPresenter.swift; sourceTree = "<group>"; };
+		B416E03125FBD8EC008CCF7A /* DetailCharacterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCharacterRouter.swift; sourceTree = "<group>"; };
+		B416E03625FBD93F008CCF7A /* DetailCharacterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCharacterCoordinator.swift; sourceTree = "<group>"; };
 		B451BCC525FBAE9900D5DFE9 /* EntelgyMarvel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EntelgyMarvel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B451BCC825FBAE9900D5DFE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B451BCD125FBAE9A00D5DFE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -68,6 +81,8 @@
 		B451BD6225FBB9D500D5DFE9 /* ListCharactersCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCharactersCoordinator.swift; sourceTree = "<group>"; };
 		B451BD7025FBBCC400D5DFE9 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		B451BD7C25FBBE2500D5DFE9 /* ListCharactersRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCharactersRouter.swift; sourceTree = "<group>"; };
+		B49476A425FBF30C005751C0 /* CharacterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCollectionViewCell.swift; sourceTree = "<group>"; };
+		B49476A525FBF30C005751C0 /* CharacterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B49476AD25FBF6A9005751C0 /* Kingfisher in Frameworks */,
 				B416E01F25FBD272008CCF7A /* CryptoSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -124,6 +140,17 @@
 			path = ListCharactersVC;
 			sourceTree = "<group>";
 		};
+		B416E02425FBD641008CCF7A /* DetailCharacterVC */ = {
+			isa = PBXGroup;
+			children = (
+				B416E02525FBD666008CCF7A /* DetailCharacterViewController.swift */,
+				B416E02625FBD666008CCF7A /* DetailCharacterViewController.xib */,
+				B416E02C25FBD8E0008CCF7A /* DetailCharacterPresenter.swift */,
+				B416E03125FBD8EC008CCF7A /* DetailCharacterRouter.swift */,
+			);
+			path = DetailCharacterVC;
+			sourceTree = "<group>";
+		};
 		B451BCBC25FBAE9900D5DFE9 = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +174,7 @@
 		B451BCC725FBAE9900D5DFE9 /* EntelgyMarvel */ = {
 			isa = PBXGroup;
 			children = (
+				B49476A025FBF2D2005751C0 /* Components */,
 				B416E01725FBC684008CCF7A /* Models */,
 				B416E00C25FBC438008CCF7A /* Services */,
 				B451BD6F25FBBB5700D5DFE9 /* Utils */,
@@ -192,6 +220,7 @@
 		B451BD0725FBB05E00D5DFE9 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				B416E02425FBD641008CCF7A /* DetailCharacterVC */,
 				B416E02325FBD615008CCF7A /* ListCharactersVC */,
 			);
 			path = Modules;
@@ -217,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				B451BD6225FBB9D500D5DFE9 /* ListCharactersCoordinator.swift */,
+				B416E03625FBD93F008CCF7A /* DetailCharacterCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -227,6 +257,15 @@
 				B451BD7025FBBCC400D5DFE9 /* Utils.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		B49476A025FBF2D2005751C0 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B49476A425FBF30C005751C0 /* CharacterCollectionViewCell.swift */,
+				B49476A525FBF30C005751C0 /* CharacterCollectionViewCell.xib */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,6 +286,7 @@
 			name = EntelgyMarvel;
 			packageProductDependencies = (
 				B416E01E25FBD272008CCF7A /* CryptoSwift */,
+				B49476AC25FBF6A9005751C0 /* Kingfisher */,
 			);
 			productName = EntelgyMarvel;
 			productReference = B451BCC525FBAE9900D5DFE9 /* EntelgyMarvel.app */;
@@ -321,6 +361,7 @@
 			mainGroup = B451BCBC25FBAE9900D5DFE9;
 			packageReferences = (
 				B416E01D25FBD272008CCF7A /* XCRemoteSwiftPackageReference "CryptoSwift" */,
+				B49476AB25FBF6A9005751C0 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = B451BCC625FBAE9900D5DFE9 /* Products */;
 			projectDirPath = "";
@@ -341,6 +382,8 @@
 				B451BD0B25FBB08400D5DFE9 /* ListCharactersViewController.xib in Resources */,
 				B451BCD525FBAE9A00D5DFE9 /* LaunchScreen.storyboard in Resources */,
 				B451BCD225FBAE9A00D5DFE9 /* Assets.xcassets in Resources */,
+				B49476A725FBF30C005751C0 /* CharacterCollectionViewCell.xib in Resources */,
+				B416E02825FBD666008CCF7A /* DetailCharacterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,17 +409,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				B416E00525FBC0A7008CCF7A /* BaseMVP.swift in Sources */,
+				B416E02725FBD666008CCF7A /* DetailCharacterViewController.swift in Sources */,
 				B451BD6325FBB9D500D5DFE9 /* ListCharactersCoordinator.swift in Sources */,
 				B451BD3325FBB24E00D5DFE9 /* ListCharactersPresenter.swift in Sources */,
 				B416E01325FBC4CA008CCF7A /* StoreManager.swift in Sources */,
 				B451BD4B25FBB4D900D5DFE9 /* UIViewController+Extensions.swift in Sources */,
+				B49476A625FBF30C005751C0 /* CharacterCollectionViewCell.swift in Sources */,
 				B451BD7125FBBCC400D5DFE9 /* Utils.swift in Sources */,
 				B451BD0A25FBB08400D5DFE9 /* ListCharactersViewController.swift in Sources */,
 				B451BD0025FBB00000D5DFE9 /* AppAssembly.swift in Sources */,
 				B451BCC925FBAE9900D5DFE9 /* AppDelegate.swift in Sources */,
 				B416E01925FBC699008CCF7A /* ListCharactersModel.swift in Sources */,
+				B416E03225FBD8EC008CCF7A /* DetailCharacterRouter.swift in Sources */,
 				B451BD7D25FBBE2500D5DFE9 /* ListCharactersRouter.swift in Sources */,
 				B416E00E25FBC4C0008CCF7A /* ServiceManager.swift in Sources */,
+				B416E03725FBD93F008CCF7A /* DetailCharacterCoordinator.swift in Sources */,
+				B416E02D25FBD8E0008CCF7A /* DetailCharacterPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -711,6 +759,14 @@
 				minimumVersion = 1.3.8;
 			};
 		};
+		B49476AB25FBF6A9005751C0 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.2.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -718,6 +774,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B416E01D25FBD272008CCF7A /* XCRemoteSwiftPackageReference "CryptoSwift" */;
 			productName = CryptoSwift;
+		};
+		B49476AC25FBF6A9005751C0 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B49476AB25FBF6A9005751C0 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

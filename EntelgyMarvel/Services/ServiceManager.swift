@@ -16,11 +16,15 @@ protocol ServiceManagerProtocol {
 enum ListEndPoint: String {
     case characters
     case comics
+    case series
+    case stories
     
     var description: String {
         switch self {
         case .characters: return "Characters"
         case .comics: return "Comics"
+        case .series: return "Series"
+        case .stories: return "Stories"
         }
     }
 }

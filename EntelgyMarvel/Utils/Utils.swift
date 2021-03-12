@@ -7,6 +7,7 @@
 
 import Foundation
 import CryptoSwift
+import UIKit
 
 class Utils {
     
@@ -46,6 +47,65 @@ class Helpers {
         let pTimeStamp = self.getTimeStamp()
         let hash = (pTimeStamp+Utils.BaseURL().privateApiKey+Utils.BaseURL().publicApiKey).md5()
         return hash
+    }
+    
+    func showPostersInCollectionView(_ myCollectionView : UICollectionView) -> CGSize{
+        let flowLayout = UICollectionViewFlowLayout()
+        let cellSpacing = CGFloat(1)
+        let leftRightMargin = CGFloat(20)
+        let numColumns = CGFloat(2)
+        let totalCellSpace = cellSpacing * (numColumns - 1)
+        let screenWidth = UIScreen.main.bounds.width
+        let width = (screenWidth - leftRightMargin - totalCellSpace) / numColumns
+        var height = CGFloat(270)
+        height = width * height / 180
+        flowLayout.itemSize = CGSize(width: width, height: height)
+        return flowLayout.itemSize
+    }
+}
+
+
+public protocol ReuseIdentifierProtocol : class {
+    static var defaultReuseIdentifier : String{get}
+}
+
+public extension ReuseIdentifierProtocol where Self : UIView {
+    static var defaultReuseIdentifier : String{
+        return NSStringFromClass(self).components(separatedBy: ".").last!
+    }
+}
+
+private let _imageCache = NSCache<AnyObject, AnyObject>()
+
+class ImageLoader : ObservableObject {
+    
+    @Published var image: UIImage?
+    @Published var isLoading = false
+    
+    var imageCache = _imageCache
+    
+    func loadImage(whit url: URL) {
+        let urlString = url.absoluteString
+        if let imageFromCache = imageCache.object(forKey: urlString as AnyObject) as? UIImage {
+            self.image = imageFromCache
+            return
+        }
+        
+        DispatchQueue.global(qos: .background).async { [weak self] in
+            guard let self = self else { return }
+            do {
+                let data = try Data(contentsOf: url)
+                guard let image = UIImage(data: data) else {
+                    return
+                }
+                self.imageCache.setObject(image, forKey: urlString as AnyObject)
+                DispatchQueue.main.async { [weak self] in
+                    self?.image = image
+                }
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
     }
 }
 

@@ -17,7 +17,7 @@ final class AppAssembly {
     private (set) var actualViewController: UIViewController!
     
     internal func applicationShowInitVC(_ window: UIWindow) {
-        actualViewController = ListCharactersAssembly().build()
+        actualViewController = ListCharactersAssembly().navigation()
         window.rootViewController = actualViewController
         window.makeKeyAndVisible()
     }

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Kingfisher
 
 protocol ListCharactersPresenterRouterInterface: PresenterRouterInterface {
 
@@ -13,6 +14,8 @@ protocol ListCharactersPresenterRouterInterface: PresenterRouterInterface {
 
 protocol ListCharactersPresenterViewInterface: PresenterViewInterface {
     func loadMovies(whit endpoint: ListEndPoint)
+    func getNumberOfRowCell() -> Int?
+    func getModelDataCell(index: Int) -> ResultCharacter?
 }
 
 final class ListCharactersPresenter: PresenterInterface {
@@ -21,7 +24,7 @@ final class ListCharactersPresenter: PresenterInterface {
     var router: ListCharactersRouterPresenterInterface!
     weak var view: ListCharactersViewPresenterInterface!
     
-    var listCharacters: [ResultCharacter]?
+    var listCharacters: [ResultCharacter]? = []
     var isLoading = false
     var error: NSError?
     
@@ -48,11 +51,21 @@ extension ListCharactersPresenter: ListCharactersPresenterViewInterface {
             switch result {
             case .success(let response):
                 self.listCharacters = response.data?.results
-                self.view.getDataFromWeb(data: self.listCharacters)
+                self.view.reloadData()
             case .failure(let error):
                 self.error = error as NSError
             }
         }
     }
+    
+    internal func getNumberOfRowCell() -> Int? {
+        return listCharacters?.count ?? 0
+    }
+
+    internal func getModelDataCell(index: Int) -> ResultCharacter? {
+        return (listCharacters?[index])!
+    }
+    
+   
     
 }
