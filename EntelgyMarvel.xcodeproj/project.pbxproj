@@ -40,6 +40,9 @@
 		B4AB3A3F25FFD64A003FB027 /* SeriesTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AB3A3D25FFD64A003FB027 /* SeriesTableCell.swift */; };
 		B4AB3A4025FFD64A003FB027 /* SeriesTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4AB3A3E25FFD64A003FB027 /* SeriesTableCell.xib */; };
 		B4AB3A4525FFF2BE003FB027 /* DetailComicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AB3A4425FFF2BE003FB027 /* DetailComicModel.swift */; };
+		B4AB3A5C26000DD2003FB027 /* DetailSeriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AB3A5B26000DD2003FB027 /* DetailSeriesModel.swift */; };
+		B4AB3A6C26000FD5003FB027 /* SeriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AB3A6A26000FD5003FB027 /* SeriesTableViewCell.swift */; };
+		B4AB3A6D26000FD5003FB027 /* SeriesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4AB3A6B26000FD5003FB027 /* SeriesTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +100,9 @@
 		B4AB3A3D25FFD64A003FB027 /* SeriesTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesTableCell.swift; sourceTree = "<group>"; };
 		B4AB3A3E25FFD64A003FB027 /* SeriesTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeriesTableCell.xib; sourceTree = "<group>"; };
 		B4AB3A4425FFF2BE003FB027 /* DetailComicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailComicModel.swift; sourceTree = "<group>"; };
+		B4AB3A5B26000DD2003FB027 /* DetailSeriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSeriesModel.swift; sourceTree = "<group>"; };
+		B4AB3A6A26000FD5003FB027 /* SeriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesTableViewCell.swift; sourceTree = "<group>"; };
+		B4AB3A6B26000FD5003FB027 /* SeriesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeriesTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +146,7 @@
 			children = (
 				B416E01825FBC699008CCF7A /* ListCharactersModel.swift */,
 				B4AB3A4425FFF2BE003FB027 /* DetailComicModel.swift */,
+				B4AB3A5B26000DD2003FB027 /* DetailSeriesModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -309,6 +316,8 @@
 				B4AB3A3725FFCAFE003FB027 /* HeaderDetailCell.xib */,
 				B4AB3A3D25FFD64A003FB027 /* SeriesTableCell.swift */,
 				B4AB3A3E25FFD64A003FB027 /* SeriesTableCell.xib */,
+				B4AB3A6A26000FD5003FB027 /* SeriesTableViewCell.swift */,
+				B4AB3A6B26000FD5003FB027 /* SeriesTableViewCell.xib */,
 			);
 			path = DetailCharacter;
 			sourceTree = "<group>";
@@ -425,6 +434,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B451BD0B25FBB08400D5DFE9 /* ListCharactersViewController.xib in Resources */,
+				B4AB3A6D26000FD5003FB027 /* SeriesTableViewCell.xib in Resources */,
 				B4AB3A1F25FFAF07003FB027 /* HomeTabBarViewController.xib in Resources */,
 				B4AB3A3925FFCAFE003FB027 /* HeaderDetailCell.xib in Resources */,
 				B451BCD525FBAE9A00D5DFE9 /* LaunchScreen.storyboard in Resources */,
@@ -458,11 +468,13 @@
 			files = (
 				B4AB3A4525FFF2BE003FB027 /* DetailComicModel.swift in Sources */,
 				B416E00525FBC0A7008CCF7A /* BaseMVP.swift in Sources */,
+				B4AB3A6C26000FD5003FB027 /* SeriesTableViewCell.swift in Sources */,
 				B416E02725FBD666008CCF7A /* DetailCharacterViewController.swift in Sources */,
 				B451BD6325FBB9D500D5DFE9 /* ListCharactersCoordinator.swift in Sources */,
 				B451BD3325FBB24E00D5DFE9 /* ListCharactersPresenter.swift in Sources */,
 				B416E01325FBC4CA008CCF7A /* StoreManager.swift in Sources */,
 				B451BD4B25FBB4D900D5DFE9 /* UIViewController+Extensions.swift in Sources */,
+				B4AB3A5C26000DD2003FB027 /* DetailSeriesModel.swift in Sources */,
 				B49476A625FBF30C005751C0 /* CharacterCollectionViewCell.swift in Sources */,
 				B4AB3A3F25FFD64A003FB027 /* SeriesTableCell.swift in Sources */,
 				B451BD7125FBBCC400D5DFE9 /* Utils.swift in Sources */,

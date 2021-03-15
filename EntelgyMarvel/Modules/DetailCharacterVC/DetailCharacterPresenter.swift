@@ -13,6 +13,7 @@ protocol DetailCharacterPresenterRouterInterface: PresenterRouterInterface {
 
 protocol DetailCharacterPresenterViewInterface: PresenterViewInterface {
     func loadDetailCharacter(whit endpoint: ListEndPoint)
+    func loadDetailSeries(whit endpoint:ListEndPoint)
     func getHeaderInfoOfRow(completion: @escaping (ResultCharacter?) -> Void)
     func getArrayItemComics() -> Int
     func getInfoComic(index: Int, completion: @escaping(ResultComic) -> Void)
@@ -26,6 +27,7 @@ final class DetailCharacterPresenter: PresenterInterface {
     weak var view: DetailCharacterViewPresenterInterface!
     
     var listDetailComic: [ResultComic]? = []
+    var listSeries: [ResultSeries]? = []
     var dataResult: ResultCharacter? = nil
     var error: NSError?
     private let fetchService: ServiceManagerProtocol
@@ -43,12 +45,24 @@ extension DetailCharacterPresenter: DetailCharacterPresenterRouterInterface {
 extension DetailCharacterPresenter: DetailCharacterPresenterViewInterface {
     
     func loadDetailCharacter(whit endpoint: ListEndPoint) {
-
         self.fetchService.fetchDetailCharacter(from: endpoint, id: "\(self.dataResult?.id ?? 0)", typeEndpoint: .comics) { [weak self] (result) in
             guard let self = self else { return }
             switch result {
             case .success(let response):
                 self.listDetailComic = response.data?.results
+                self.view.reloadData()
+            case .failure(let error):
+                self.error = error as NSError
+            }
+        }
+    }
+    
+    func loadDetailSeries(whit endpoint: ListEndPoint) {
+        self.fetchService.fetchDetailSeries(from: endpoint, id: "\(self.dataResult?.id ?? 0)", typeEndpoint: .series) { [weak self] (result) in
+            guard let self = self else { return }
+            switch result {
+            case .success(let response):
+                self.listSeries = response.data?.results
                 self.view.reloadData()
             case .failure(let error):
                 self.error = error as NSError

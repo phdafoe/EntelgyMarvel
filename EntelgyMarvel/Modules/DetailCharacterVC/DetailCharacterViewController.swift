@@ -21,11 +21,13 @@ class DetailCharacterViewController: UIViewController, ViewInterface {
         super.viewDidLoad()
         
         self.presenter.loadDetailCharacter(whit: .characters)
+        self.presenter.loadDetailSeries(whit: .characters)
         
         self.myDetailTableView.delegate = self
         self.myDetailTableView.dataSource = self
         
         self.myDetailTableView.register(UINib(nibName: HeaderDetailCell.defaultReuseIdentifier, bundle: nil), forCellReuseIdentifier: HeaderDetailCell.defaultReuseIdentifier)
+        
         self.myDetailTableView.register(UINib(nibName: SeriesTableCell.defaultReuseIdentifier, bundle: nil), forCellReuseIdentifier: SeriesTableCell.defaultReuseIdentifier)
 
         // Do any additional setup after loading the view.
@@ -49,13 +51,15 @@ extension DetailCharacterViewController: DetailCharacterViewPresenterInterface {
 
 extension DetailCharacterViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         switch section {
         case 0:
+            return 1
+        case 1:
             return 1
         default:
             return self.presenter.getArrayItemComics()
