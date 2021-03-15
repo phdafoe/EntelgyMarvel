@@ -23,7 +23,7 @@ class ListCharactersViewController: UIViewController, ViewInterface {
         self.myCollectionView.delegate = self
         self.myCollectionView.dataSource = self
         self.myCollectionView.register(UINib(nibName: CharacterCollectionViewCell.defaultReuseIdentifier, bundle: nil), forCellWithReuseIdentifier: CharacterCollectionViewCell.defaultReuseIdentifier)
-        self.presenter.loadMovies(whit: .characters)
+        self.presenter.loadCharacters(whit: .characters)
     }
     
 }

@@ -13,7 +13,7 @@ protocol ListCharactersPresenterRouterInterface: PresenterRouterInterface {
 }
 
 protocol ListCharactersPresenterViewInterface: PresenterViewInterface {
-    func loadMovies(whit endpoint: ListEndPoint)
+    func loadCharacters(whit endpoint: ListEndPoint)
     func getNumberOfRowCell() -> Int?
     func getModelDataCell(index: Int) -> ResultCharacter?
     func showDetailCharacterFromView(data: ResultCharacter)
@@ -26,7 +26,6 @@ final class ListCharactersPresenter: PresenterInterface {
     weak var view: ListCharactersViewPresenterInterface!
     
     var listCharacters: [ResultCharacter]? = []
-    var isLoading = false
     var error: NSError?
     
     private let fetchService: ServiceManagerProtocol
@@ -48,12 +47,10 @@ extension ListCharactersPresenter: ListCharactersPresenterViewInterface {
     }
     
     
-    internal func loadMovies(whit endpoint: ListEndPoint) {
+    internal func loadCharacters(whit endpoint: ListEndPoint) {
         self.listCharacters = nil
-        self.isLoading = false
         self.fetchService.fetchListCharacters(from: endpoint) { [weak self] (result) in
             guard let self = self else { return }
-            self.isLoading = false
             switch result {
             case .success(let response):
                 self.listCharacters = response.data?.results

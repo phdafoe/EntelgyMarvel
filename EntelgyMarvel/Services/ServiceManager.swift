@@ -10,6 +10,7 @@ import Foundation
 protocol ServiceManagerProtocol {
     
     func fetchListCharacters(from endpoint: ListEndPoint,completion: @escaping (Result<ListCharacteresModel, ApiError>) -> ())
+    func fetchDetailCharacter(from endpoint: ListEndPoint, id: String, typeEndpoint: ListEndPoint, completion: @escaping (Result<DetailComicModel, ApiError>) -> ())
     
 }
 

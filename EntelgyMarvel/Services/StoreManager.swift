@@ -19,7 +19,21 @@ class StoreManager: ServiceManagerProtocol {
         }
         self.loadURLAndDecode(url: url, params:[
             "orderBy": "name",
-            "limit": "35",
+            "limit": "20",
+            "hash": "\(Helpers().getHash())",
+            "ts": "\(Helpers().getTimeStamp())"
+        ], completion: completion)
+    }
+    
+    func fetchDetailCharacter(from endpoint: ListEndPoint, id: String, typeEndpoint: ListEndPoint, completion: @escaping (Result<DetailComicModel, ApiError>) -> ()) {
+        guard let url = URL(string: "\(Utils.BaseURL().baseAPIURL)/\(endpoint)/\(id)/\(typeEndpoint)") else {
+            completion(.failure(.invalidEndpoint))
+            return
+        }
+        self.loadURLAndDecode(url: url, params:[
+            "orderBy": "title",
+            "characterId": "\(id)",
+            "limit": "20",
             "hash": "\(Helpers().getHash())",
             "ts": "\(Helpers().getTimeStamp())"
         ], completion: completion)
