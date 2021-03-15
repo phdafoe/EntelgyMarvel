@@ -19,7 +19,7 @@ class ListCharactersViewController: UIViewController, ViewInterface {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Marvel - Characters"
+        self.title = "Characters"
         self.myCollectionView.delegate = self
         self.myCollectionView.dataSource = self
         self.myCollectionView.register(UINib(nibName: CharacterCollectionViewCell.defaultReuseIdentifier, bundle: nil), forCellWithReuseIdentifier: CharacterCollectionViewCell.defaultReuseIdentifier)

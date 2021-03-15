@@ -62,6 +62,12 @@ class Helpers {
         flowLayout.itemSize = CGSize(width: width, height: height)
         return flowLayout.itemSize
     }
+    
+    struct Colores {
+        let GRIS_BARRA_NAVEGACION = #colorLiteral(red: 0.2549019608, green: 0.2745098039, blue: 0.3019607843, alpha: 1)
+        let AZUL_NAV = #colorLiteral(red: 0.1921568627, green: 0.1921568627, blue: 0.1921568627, alpha: 1)
+        let BLANCO_TEXTO_NAV = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+    }
 }
 
 

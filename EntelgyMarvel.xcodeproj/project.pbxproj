@@ -35,6 +35,8 @@
 		B49476AD25FBF6A9005751C0 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B49476AC25FBF6A9005751C0 /* Kingfisher */; };
 		B4AB3A1E25FFAF07003FB027 /* HomeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AB3A1C25FFAF07003FB027 /* HomeTabBarViewController.swift */; };
 		B4AB3A1F25FFAF07003FB027 /* HomeTabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4AB3A1D25FFAF07003FB027 /* HomeTabBarViewController.xib */; };
+		B4AB3A3825FFCAFE003FB027 /* HeaderDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AB3A3625FFCAFE003FB027 /* HeaderDetailCell.swift */; };
+		B4AB3A3925FFCAFE003FB027 /* HeaderDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4AB3A3725FFCAFE003FB027 /* HeaderDetailCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +89,8 @@
 		B49476A525FBF30C005751C0 /* CharacterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterCollectionViewCell.xib; sourceTree = "<group>"; };
 		B4AB3A1C25FFAF07003FB027 /* HomeTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewController.swift; sourceTree = "<group>"; };
 		B4AB3A1D25FFAF07003FB027 /* HomeTabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTabBarViewController.xib; sourceTree = "<group>"; };
+		B4AB3A3625FFCAFE003FB027 /* HeaderDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderDetailCell.swift; sourceTree = "<group>"; };
+		B4AB3A3725FFCAFE003FB027 /* HeaderDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderDetailCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,8 +271,8 @@
 		B49476A025FBF2D2005751C0 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				B49476A425FBF30C005751C0 /* CharacterCollectionViewCell.swift */,
-				B49476A525FBF30C005751C0 /* CharacterCollectionViewCell.xib */,
+				B4AB3A3525FFCAC6003FB027 /* DetailCharacter */,
+				B4AB3A3425FFCAB3003FB027 /* ListCharacters */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -280,6 +284,24 @@
 				B4AB3A1D25FFAF07003FB027 /* HomeTabBarViewController.xib */,
 			);
 			path = HomeTabBarVC;
+			sourceTree = "<group>";
+		};
+		B4AB3A3425FFCAB3003FB027 /* ListCharacters */ = {
+			isa = PBXGroup;
+			children = (
+				B49476A425FBF30C005751C0 /* CharacterCollectionViewCell.swift */,
+				B49476A525FBF30C005751C0 /* CharacterCollectionViewCell.xib */,
+			);
+			path = ListCharacters;
+			sourceTree = "<group>";
+		};
+		B4AB3A3525FFCAC6003FB027 /* DetailCharacter */ = {
+			isa = PBXGroup;
+			children = (
+				B4AB3A3625FFCAFE003FB027 /* HeaderDetailCell.swift */,
+				B4AB3A3725FFCAFE003FB027 /* HeaderDetailCell.xib */,
+			);
+			path = DetailCharacter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -395,6 +417,7 @@
 			files = (
 				B451BD0B25FBB08400D5DFE9 /* ListCharactersViewController.xib in Resources */,
 				B4AB3A1F25FFAF07003FB027 /* HomeTabBarViewController.xib in Resources */,
+				B4AB3A3925FFCAFE003FB027 /* HeaderDetailCell.xib in Resources */,
 				B451BCD525FBAE9A00D5DFE9 /* LaunchScreen.storyboard in Resources */,
 				B451BCD225FBAE9A00D5DFE9 /* Assets.xcassets in Resources */,
 				B49476A725FBF30C005751C0 /* CharacterCollectionViewCell.xib in Resources */,
@@ -436,6 +459,7 @@
 				B451BD0025FBB00000D5DFE9 /* AppAssembly.swift in Sources */,
 				B451BCC925FBAE9900D5DFE9 /* AppDelegate.swift in Sources */,
 				B416E01925FBC699008CCF7A /* ListCharactersModel.swift in Sources */,
+				B4AB3A3825FFCAFE003FB027 /* HeaderDetailCell.swift in Sources */,
 				B416E03225FBD8EC008CCF7A /* DetailCharacterRouter.swift in Sources */,
 				B451BD7D25FBBE2500D5DFE9 /* ListCharactersRouter.swift in Sources */,
 				B416E00E25FBC4C0008CCF7A /* ServiceManager.swift in Sources */,

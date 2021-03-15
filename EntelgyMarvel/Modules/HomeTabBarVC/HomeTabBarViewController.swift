@@ -11,8 +11,21 @@ class HomeTabBarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let oneViewController = ListCharactersAssembly().navigation()
+        let twoViewController = ListCharactersAssembly().navigation()
 
-        // Do any additional setup after loading the view.
+        let customOneTabBarItem = UITabBarItem(title: nil,
+                                               image: UIImage(named: "reloj")?.withRenderingMode(.alwaysOriginal),
+                                               selectedImage: UIImage(named: "reloj"))
+        
+        let customTwoTabBarItem = UITabBarItem(title: nil,
+                                               image: UIImage(named: "reloj")?.withRenderingMode(.alwaysOriginal),
+                                               selectedImage: UIImage(named: "reloj"))
+        
+        oneViewController.tabBarItem = customOneTabBarItem
+        twoViewController.tabBarItem = customTwoTabBarItem
+        self.viewControllers = [oneViewController, twoViewController]
     }
 
 
