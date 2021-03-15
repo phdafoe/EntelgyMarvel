@@ -16,12 +16,17 @@ final class DetailCharacterCoordinator: MVPProtocol {
     typealias Presenter = DetailCharacterPresenter
     typealias Router = DetailCharacterRouter
 
-    func build() -> UIViewController {
+    func build(dto: DetailCharacterCoordinatorDTO? = nil) -> UIViewController {
         let view = View()
         let presenter = Presenter()
+        presenter.dataResult = dto?.data
         let router = Router()
         self.assemble(view: view, presenter: presenter, router: router)
         router.viewController = view
         return view
     }
+}
+
+struct DetailCharacterCoordinatorDTO {
+    var data: ResultCharacter
 }

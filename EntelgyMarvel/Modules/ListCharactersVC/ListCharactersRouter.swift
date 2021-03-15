@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol ListCharactersRouterPresenterInterface: RouterPresenterInterface {
-
+    func showDetailCharacter(data: ResultCharacter)
 }
 
 final class ListCharactersRouter: RouterInterface {
@@ -18,5 +18,11 @@ final class ListCharactersRouter: RouterInterface {
 }
 
 extension ListCharactersRouter: ListCharactersRouterPresenterInterface {
+    func showDetailCharacter(data: ResultCharacter) {
+        let vc = DetailCharacterCoordinator().build(dto: DetailCharacterCoordinatorDTO(data: data))
+        self.viewController?.navigationController?.pushViewController(vc, animated: true)
+        
+    }
+    
 
 }

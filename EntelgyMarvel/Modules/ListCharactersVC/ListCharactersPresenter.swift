@@ -9,13 +9,14 @@ import Foundation
 import Kingfisher
 
 protocol ListCharactersPresenterRouterInterface: PresenterRouterInterface {
-
+    
 }
 
 protocol ListCharactersPresenterViewInterface: PresenterViewInterface {
     func loadMovies(whit endpoint: ListEndPoint)
     func getNumberOfRowCell() -> Int?
     func getModelDataCell(index: Int) -> ResultCharacter?
+    func showDetailCharacterFromView(data: ResultCharacter)
 }
 
 final class ListCharactersPresenter: PresenterInterface {
@@ -38,9 +39,14 @@ final class ListCharactersPresenter: PresenterInterface {
 
 extension ListCharactersPresenter: ListCharactersPresenterRouterInterface {
 
+   
 }
 
 extension ListCharactersPresenter: ListCharactersPresenterViewInterface {
+    func showDetailCharacterFromView(data: ResultCharacter) {
+        self.router.showDetailCharacter(data: data)
+    }
+    
     
     internal func loadMovies(whit endpoint: ListEndPoint) {
         self.listCharacters = nil

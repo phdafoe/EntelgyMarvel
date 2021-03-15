@@ -21,6 +21,8 @@ final class DetailCharacterPresenter: PresenterInterface {
     // Dependencies
     var router: ListCharactersRouterPresenterInterface!
     weak var view: ListCharactersViewPresenterInterface!
+    
+    var dataResult: ResultCharacter? = nil
 }
 
 extension DetailCharacterPresenter: DetailCharacterPresenterRouterInterface {

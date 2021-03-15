@@ -33,6 +33,8 @@
 		B49476A625FBF30C005751C0 /* CharacterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49476A425FBF30C005751C0 /* CharacterCollectionViewCell.swift */; };
 		B49476A725FBF30C005751C0 /* CharacterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B49476A525FBF30C005751C0 /* CharacterCollectionViewCell.xib */; };
 		B49476AD25FBF6A9005751C0 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B49476AC25FBF6A9005751C0 /* Kingfisher */; };
+		B4AB3A1E25FFAF07003FB027 /* HomeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AB3A1C25FFAF07003FB027 /* HomeTabBarViewController.swift */; };
+		B4AB3A1F25FFAF07003FB027 /* HomeTabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4AB3A1D25FFAF07003FB027 /* HomeTabBarViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,8 @@
 		B451BD7C25FBBE2500D5DFE9 /* ListCharactersRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCharactersRouter.swift; sourceTree = "<group>"; };
 		B49476A425FBF30C005751C0 /* CharacterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCollectionViewCell.swift; sourceTree = "<group>"; };
 		B49476A525FBF30C005751C0 /* CharacterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterCollectionViewCell.xib; sourceTree = "<group>"; };
+		B4AB3A1C25FFAF07003FB027 /* HomeTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewController.swift; sourceTree = "<group>"; };
+		B4AB3A1D25FFAF07003FB027 /* HomeTabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTabBarViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +224,7 @@
 		B451BD0725FBB05E00D5DFE9 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				B4AB3A1B25FFAEDC003FB027 /* HomeTabBarVC */,
 				B416E02425FBD641008CCF7A /* DetailCharacterVC */,
 				B416E02325FBD615008CCF7A /* ListCharactersVC */,
 			);
@@ -266,6 +271,15 @@
 				B49476A525FBF30C005751C0 /* CharacterCollectionViewCell.xib */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		B4AB3A1B25FFAEDC003FB027 /* HomeTabBarVC */ = {
+			isa = PBXGroup;
+			children = (
+				B4AB3A1C25FFAF07003FB027 /* HomeTabBarViewController.swift */,
+				B4AB3A1D25FFAF07003FB027 /* HomeTabBarViewController.xib */,
+			);
+			path = HomeTabBarVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -380,6 +394,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B451BD0B25FBB08400D5DFE9 /* ListCharactersViewController.xib in Resources */,
+				B4AB3A1F25FFAF07003FB027 /* HomeTabBarViewController.xib in Resources */,
 				B451BCD525FBAE9A00D5DFE9 /* LaunchScreen.storyboard in Resources */,
 				B451BCD225FBAE9A00D5DFE9 /* Assets.xcassets in Resources */,
 				B49476A725FBF30C005751C0 /* CharacterCollectionViewCell.xib in Resources */,
@@ -417,6 +432,7 @@
 				B49476A625FBF30C005751C0 /* CharacterCollectionViewCell.swift in Sources */,
 				B451BD7125FBBCC400D5DFE9 /* Utils.swift in Sources */,
 				B451BD0A25FBB08400D5DFE9 /* ListCharactersViewController.swift in Sources */,
+				B4AB3A1E25FFAF07003FB027 /* HomeTabBarViewController.swift in Sources */,
 				B451BD0025FBB00000D5DFE9 /* AppAssembly.swift in Sources */,
 				B451BCC925FBAE9900D5DFE9 /* AppDelegate.swift in Sources */,
 				B416E01925FBC699008CCF7A /* ListCharactersModel.swift in Sources */,

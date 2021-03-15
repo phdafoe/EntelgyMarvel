@@ -19,6 +19,7 @@ class ListCharactersViewController: UIViewController, ViewInterface {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Marvel - Characters"
         self.myCollectionView.delegate = self
         self.myCollectionView.dataSource = self
         self.myCollectionView.register(UINib(nibName: CharacterCollectionViewCell.defaultReuseIdentifier, bundle: nil), forCellWithReuseIdentifier: CharacterCollectionViewCell.defaultReuseIdentifier)
@@ -56,7 +57,9 @@ extension ListCharactersViewController: UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //
+        if let dataModel = self.presenter.getModelDataCell(index: indexPath.row) {
+            self.presenter.showDetailCharacterFromView(data: dataModel)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
