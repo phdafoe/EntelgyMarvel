@@ -13,9 +13,8 @@ protocol ListComicsPresenterRouterInterface: PresenterRouterInterface {
 
 protocol ListComicsPresenterViewInterface: PresenterViewInterface {
     func loadComics(whit endpoint: ListEndPoint)
-    //func getNumberOfRowCell() -> Int?
-    //func getModelDataCell(index: Int) -> ResultCharacter?
-    //func showDetailCharacterFromView(data: ResultCharacter)
+    func getNumberOfRowCell() -> Int?
+    func getModelDataCell(index: Int) -> ResultComics?
 }
 
 final class ListComicsPresenter: PresenterInterface {
@@ -51,5 +50,13 @@ extension ListComicsPresenter: ListComicsPresenterViewInterface {
                 self.error = error as NSError
             }
         }
+    }
+    
+    func getNumberOfRowCell() -> Int? {
+        return self.listComics?.count ?? 0
+    }
+    
+    func getModelDataCell(index: Int) -> ResultComics? {
+        return self.listComics![index]
     }
 }

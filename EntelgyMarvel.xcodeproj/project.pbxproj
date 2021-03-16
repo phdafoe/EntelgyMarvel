@@ -49,6 +49,8 @@
 		B4B9D56D260142B90032C75B /* ListComicsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B9D56C260142B90032C75B /* ListComicsPresenter.swift */; };
 		B4B9D572260143630032C75B /* ListComicsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B9D571260143630032C75B /* ListComicsRouter.swift */; };
 		B4B9D577260144850032C75B /* ListComicsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B9D576260144850032C75B /* ListComicsModel.swift */; };
+		B4B9D57E260147B90032C75B /* ComicsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B9D57C260147B90032C75B /* ComicsTableViewCell.swift */; };
+		B4B9D57F260147B90032C75B /* ComicsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4B9D57D260147B90032C75B /* ComicsTableViewCell.xib */; };
 		B4F07E2F2600DBDD002C2478 /* SeriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F07E2D2600DBDD002C2478 /* SeriesCollectionViewCell.swift */; };
 		B4F07E302600DBDD002C2478 /* SeriesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4F07E2E2600DBDD002C2478 /* SeriesCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -117,6 +119,8 @@
 		B4B9D56C260142B90032C75B /* ListComicsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListComicsPresenter.swift; sourceTree = "<group>"; };
 		B4B9D571260143630032C75B /* ListComicsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListComicsRouter.swift; sourceTree = "<group>"; };
 		B4B9D576260144850032C75B /* ListComicsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListComicsModel.swift; sourceTree = "<group>"; };
+		B4B9D57C260147B90032C75B /* ComicsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsTableViewCell.swift; sourceTree = "<group>"; };
+		B4B9D57D260147B90032C75B /* ComicsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComicsTableViewCell.xib; sourceTree = "<group>"; };
 		B4F07E2D2600DBDD002C2478 /* SeriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		B4F07E2E2600DBDD002C2478 /* SeriesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeriesCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -304,6 +308,7 @@
 		B49476A025FBF2D2005751C0 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				B4B9D57B2601479A0032C75B /* ListComics */,
 				B4AB3A3525FFCAC6003FB027 /* DetailCharacter */,
 				B4AB3A3425FFCAB3003FB027 /* ListCharacters */,
 			);
@@ -352,6 +357,15 @@
 				B4B9D571260143630032C75B /* ListComicsRouter.swift */,
 			);
 			path = ListComicsVC;
+			sourceTree = "<group>";
+		};
+		B4B9D57B2601479A0032C75B /* ListComics */ = {
+			isa = PBXGroup;
+			children = (
+				B4B9D57C260147B90032C75B /* ComicsTableViewCell.swift */,
+				B4B9D57D260147B90032C75B /* ComicsTableViewCell.xib */,
+			);
+			path = ListComics;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -466,6 +480,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B451BD0B25FBB08400D5DFE9 /* ListCharactersViewController.xib in Resources */,
+				B4B9D57F260147B90032C75B /* ComicsTableViewCell.xib in Resources */,
 				B4AB3A6D26000FD5003FB027 /* SeriesTableViewCell.xib in Resources */,
 				B4AB3A1F25FFAF07003FB027 /* HomeTabBarViewController.xib in Resources */,
 				B4AB3A3925FFCAFE003FB027 /* HeaderDetailCell.xib in Resources */,
@@ -503,6 +518,7 @@
 				B4B9D572260143630032C75B /* ListComicsRouter.swift in Sources */,
 				B4AB3A4525FFF2BE003FB027 /* DetailComicModel.swift in Sources */,
 				B416E00525FBC0A7008CCF7A /* BaseMVP.swift in Sources */,
+				B4B9D57E260147B90032C75B /* ComicsTableViewCell.swift in Sources */,
 				B4AB3A6C26000FD5003FB027 /* SeriesTableViewCell.swift in Sources */,
 				B4F07E2F2600DBDD002C2478 /* SeriesCollectionViewCell.swift in Sources */,
 				B416E02725FBD666008CCF7A /* DetailCharacterViewController.swift in Sources */,
