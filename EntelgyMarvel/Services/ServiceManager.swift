@@ -13,6 +13,8 @@ protocol ServiceManagerProtocol {
     func fetchDetailCharacter(from endpoint: ListEndPoint, id: String, typeEndpoint: ListEndPoint, completion: @escaping (Result<DetailComicModel, ApiError>) -> ())
     func fetchDetailSeries(from endpoint:ListEndPoint, id: String, typeEndpoint: ListEndPoint, completion: @escaping (Result<DetailSeriesModel, ApiError>) -> ())
     
+    func fetchListComics(from endpoint: ListEndPoint, completion: @escaping (Result<ListComicsModel, ApiError>) -> ())
+    
 }
 
 enum ListEndPoint: String {

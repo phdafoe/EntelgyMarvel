@@ -100,5 +100,213 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BE45E01B-761D-4451-96E0-D9375A8504F2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EntelgyMarvel/Modules/ListComicsVC/ListComicsPresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "loadComics(whit:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "821AAFCA-3497-4B63-83C3-856099789031"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EntelgyMarvel/Modules/ListComicsVC/ListComicsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "11B15888-0721-459F-BE90-3364F4DDB5A6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EntelgyMarvel/Modules/ListComicsVC/ListComicsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "reloadData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "93576D8C-727F-40A2-93E0-F111E57D7F67"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EntelgyMarvel/Modules/ListComicsVC/ListComicsPresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "loadComics(whit:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "23B17A4F-B0EE-4DF8-9CAD-772BBACDBE40"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EntelgyMarvel/Services/StoreManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "loadURLAndDecode(url:params:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "23B17A4F-B0EE-4DF8-9CAD-772BBACDBE40 - 40ba50ae19e11b1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EntelgyMarvel.StoreManager.(loadURLAndDecode in _B3A08093C1EF3BB4768D0D0878AAE7F7)&lt;A where A: Swift.Decodable&gt;(url: Foundation.URL, params: Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Swift.String&gt;&gt;, completion: (Swift.Result&lt;A, EntelgyMarvel.ApiError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "EntelgyMarvel"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aocampoe/Documents/DEVELOPER/PERSONALES/EntelgyMarvel/EntelgyMarvel/Services/StoreManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "1678">
+               </Location>
+               <Location
+                  uuid = "23B17A4F-B0EE-4DF8-9CAD-772BBACDBE40 - a3508d0bc9b89341"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in EntelgyMarvel.StoreManager.(loadURLAndDecode in _B3A08093C1EF3BB4768D0D0878AAE7F7)&lt;A where A: Swift.Decodable&gt;(url: Foundation.URL, params: Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Swift.String&gt;&gt;, completion: (Swift.Result&lt;A, EntelgyMarvel.ApiError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "EntelgyMarvel"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aocampoe/Documents/DEVELOPER/PERSONALES/EntelgyMarvel/EntelgyMarvel/Services/StoreManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "401">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2A6BD802-F625-46CF-ABAE-E1BFE5544A82"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EntelgyMarvel/Services/StoreManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "fetchListComics(from:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "48891ABA-D10A-4BC7-90E1-65C6C1E54B61"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EntelgyMarvel/Services/StoreManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "fetchListComics(from:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E1E3D8EC-0E19-4D59-8423-E5E715CF6C28"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EntelgyMarvel/Modules/ListComicsVC/ListComicsPresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "loadComics(whit:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "31F4E45F-965A-4AE7-AB3F-F995F5A02A2B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EntelgyMarvel/Modules/ListComicsVC/ListComicsPresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "loadComics(whit:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "31F4E45F-965A-4AE7-AB3F-F995F5A02A2B - 6a5dea76ec486270"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EntelgyMarvel.ListComicsPresenter.loadComics(whit: EntelgyMarvel.ListEndPoint) -&gt; ()"
+                  moduleName = "EntelgyMarvel"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aocampoe/Documents/DEVELOPER/PERSONALES/EntelgyMarvel/EntelgyMarvel/Modules/ListComicsVC/ListComicsPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "119">
+               </Location>
+               <Location
+                  uuid = "31F4E45F-965A-4AE7-AB3F-F995F5A02A2B - e4b9db947b18ac87"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;EntelgyMarvel.ListComicsModel, EntelgyMarvel.ApiError&gt;) -&gt; () in EntelgyMarvel.ListComicsPresenter.loadComics(whit: EntelgyMarvel.ListEndPoint) -&gt; ()"
+                  moduleName = "EntelgyMarvel"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aocampoe/Documents/DEVELOPER/PERSONALES/EntelgyMarvel/EntelgyMarvel/Modules/ListComicsVC/ListComicsPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "152">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

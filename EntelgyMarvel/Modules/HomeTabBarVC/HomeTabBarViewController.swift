@@ -13,7 +13,7 @@ class HomeTabBarViewController: UITabBarController {
         super.viewDidLoad()
         
         let oneViewController = ListCharactersAssembly().navigation()
-        let twoViewController = ListCharactersAssembly().navigation()
+        let twoViewController = ListComicsAssembly().navigation()
 
         let customOneTabBarItem = UITabBarItem(title: nil,
                                                image: UIImage(named: "reloj")?.withRenderingMode(.alwaysOriginal),

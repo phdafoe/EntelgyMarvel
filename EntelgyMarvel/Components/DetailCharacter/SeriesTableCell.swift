@@ -45,7 +45,6 @@ class SeriesTableCell: UITableViewCell, ReuseIdentifierProtocol, SeriesTableCell
     internal func setInfo(data: ResultComic) {
         self.myLabelInfo.text = data.title
         self.myDescription.text = data.resultDescription
-        //self.myDate.text = data.formatDate(date: data.modified!)
         let date = Date()
         self.myDate.text = date.string(with: data.modified ?? "n/a")
         if data.prices![0].price == 0.0 {

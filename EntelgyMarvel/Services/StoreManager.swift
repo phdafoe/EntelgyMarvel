@@ -53,6 +53,19 @@ class StoreManager: ServiceManagerProtocol {
         ], completion: completion)
     }
     
+    func fetchListComics(from endpoint: ListEndPoint, completion: @escaping (Result<ListComicsModel, ApiError>) -> ()) {
+        guard let url = URL(string: "\(Utils.BaseURL().baseAPIURL)/\(endpoint)") else {
+            completion(.failure(.invalidEndpoint))
+            return
+        }
+        self.loadURLAndDecode(url: url, params:[
+            "orderBy": "title",
+            "limit": "20",
+            "hash": "\(Helpers().getHash())",
+            "ts": "\(Helpers().getTimeStamp())"
+        ], completion: completion)
+    }
+    
     private func loadURLAndDecode<D: Decodable>(url: URL, params:[String: String]? = nil, completion: @escaping (Result<D, ApiError>) -> ()) {
         guard var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
             completion(.failure(.invalidEndpoint))
