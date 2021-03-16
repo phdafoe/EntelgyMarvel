@@ -7,14 +7,14 @@
 
 import UIKit
 
-protocol SeriesTableViewCellProtoco: class {
-    <#requirements#>
+protocol SeriesTableViewCellProtocol: class {
+    func setArraySeries(data: [ResultSeries])
 }
 
 
-class SeriesTableViewCell: UITableViewCell, ReuseIdentifierProtocol, SeriesTableViewCellProtoco {
+class SeriesTableViewCell: UITableViewCell, ReuseIdentifierProtocol, SeriesTableViewCellProtocol {
     
-    
+    var myArraySeries: [ResultSeries] = []
     @IBOutlet weak var myCollectionView: UICollectionView!
     
 
@@ -22,7 +22,7 @@ class SeriesTableViewCell: UITableViewCell, ReuseIdentifierProtocol, SeriesTable
         super.awakeFromNib()
         self.myCollectionView.delegate = self
         self.myCollectionView.dataSource = self
-        self.myCollectionView.register(UINib(nibName: CharacterCollectionViewCell.defaultReuseIdentifier, bundle: nil), forCellWithReuseIdentifier: CharacterCollectionViewCell.defaultReuseIdentifier)
+        self.myCollectionView.register(UINib(nibName: SeriesCollectionViewCell.defaultReuseIdentifier, bundle: nil), forCellWithReuseIdentifier: SeriesCollectionViewCell.defaultReuseIdentifier)
         // Initialization code
     }
 
@@ -31,6 +31,12 @@ class SeriesTableViewCell: UITableViewCell, ReuseIdentifierProtocol, SeriesTable
 
         // Configure the view for the selected state
     }
+    
+    internal func setArraySeries(data: [ResultSeries]) {
+        self.myArraySeries = data
+        self.myCollectionView.reloadData()
+    }
+    
     
 }
 
@@ -41,12 +47,13 @@ extension SeriesTableViewCell: UICollectionViewDelegate, UICollectionViewDataSou
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return self.myArraySeries.count
     }
     
    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = self.myCollectionView.dequeueReusableCell(withReuseIdentifier: CharacterCollectionViewCell.defaultReuseIdentifier, for: indexPath) as! CharacterCollectionViewCell
+        let cell = self.myCollectionView.dequeueReusableCell(withReuseIdentifier: SeriesCollectionViewCell.defaultReuseIdentifier, for: indexPath) as! SeriesCollectionViewCell
+        cell.setupCell(data: self.myArraySeries[indexPath.row])
         return cell
     }
 }

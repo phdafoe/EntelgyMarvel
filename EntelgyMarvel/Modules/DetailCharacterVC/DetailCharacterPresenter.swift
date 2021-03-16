@@ -17,6 +17,7 @@ protocol DetailCharacterPresenterViewInterface: PresenterViewInterface {
     func getHeaderInfoOfRow(completion: @escaping (ResultCharacter?) -> Void)
     func getArrayItemComics() -> Int
     func getInfoComic(index: Int, completion: @escaping(ResultComic) -> Void)
+    func getInfoSeries(completion: @escaping ([ResultSeries]?) -> Void)
 }
 
 
@@ -80,6 +81,10 @@ extension DetailCharacterPresenter: DetailCharacterPresenterViewInterface {
     
     internal func getInfoComic(index: Int, completion: @escaping(ResultComic) -> Void) {
         completion(self.listDetailComic![index])
+    }
+    
+    func getInfoSeries(completion: @escaping ([ResultSeries]?) -> Void) {
+        completion(self.listSeries!)
     }
 
     

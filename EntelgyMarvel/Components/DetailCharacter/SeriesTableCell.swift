@@ -48,7 +48,11 @@ class SeriesTableCell: UITableViewCell, ReuseIdentifierProtocol, SeriesTableCell
         //self.myDate.text = data.formatDate(date: data.modified!)
         let date = Date()
         self.myDate.text = date.string(with: data.modified ?? "n/a")
-        self.myPrice.text = "\(data.prices![0].price ?? 0) €"
+        if data.prices![0].price == 0.0 {
+            self.myPrice.text = ""
+        } else {
+            self.myPrice.text = "\(data.prices![0].price ?? 0) €"
+        }
         self.myImageComic.kf.setImage(with: ImageResource(downloadURL: (data.thumbnail?.pathURL)!),
                                        placeholder: UIImage(named: "placeholder"),
                                        options: [

@@ -24,12 +24,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="180" height="270"/>
                     </imageView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="degradado" translatesAutoresizingMaskIntoConstraints="NO" id="EKO-AR-tLl">
-                        <rect key="frame" x="0.0" y="200" width="180" height="70"/>
+                        <rect key="frame" x="0.0" y="0.0" width="180" height="270"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="270" id="wKo-Gj-aKV"/>
+                        </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mID-Fz-2tF">
-                        <rect key="frame" x="8" y="241" width="164" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mID-Fz-2tF">
+                        <rect key="frame" x="8" y="241.5" width="164" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                        <color key="textColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                        <color key="textColor" systemColor="systemRedColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -37,7 +40,6 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="mID-Fz-2tF" secondAttribute="bottom" constant="8" id="0dn-HG-pIV"/>
-                <constraint firstAttribute="trailing" secondItem="EKO-AR-tLl" secondAttribute="trailing" id="0za-hm-aVZ"/>
                 <constraint firstItem="AQI-DP-lsE" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="2kG-Ye-R62"/>
                 <constraint firstAttribute="bottom" secondItem="Dd7-lR-wlQ" secondAttribute="bottom" id="3Vh-V2-vf8"/>
                 <constraint firstItem="Dd7-lR-wlQ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="89X-h0-EoV"/>
@@ -46,10 +48,11 @@
                 <constraint firstAttribute="trailing" secondItem="mID-Fz-2tF" secondAttribute="trailing" constant="8" id="AIL-6T-RMc"/>
                 <constraint firstItem="AQI-DP-lsE" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Czm-bz-Box"/>
                 <constraint firstItem="mID-Fz-2tF" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="Lly-lI-WSm"/>
+                <constraint firstAttribute="trailing" secondItem="EKO-AR-tLl" secondAttribute="trailing" id="UMP-TH-SnI"/>
                 <constraint firstAttribute="trailing" secondItem="AQI-DP-lsE" secondAttribute="trailing" id="Y8C-Ej-lKf"/>
-                <constraint firstItem="EKO-AR-tLl" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="hUe-vO-ZQ2"/>
+                <constraint firstItem="EKO-AR-tLl" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="YjN-Ge-ndE"/>
                 <constraint firstAttribute="trailing" secondItem="Dd7-lR-wlQ" secondAttribute="trailing" id="ina-eU-SiF"/>
-                <constraint firstAttribute="bottom" secondItem="EKO-AR-tLl" secondAttribute="bottom" id="uWU-Kk-Ixs"/>
+                <constraint firstAttribute="bottom" secondItem="EKO-AR-tLl" secondAttribute="bottom" id="kqY-89-yfZ"/>
             </constraints>
             <connections>
                 <outlet property="myCharacter" destination="mID-Fz-2tF" id="Wm2-9B-Xge"/>
@@ -63,8 +66,8 @@
     <resources>
         <image name="degradado" width="320" height="70"/>
         <image name="placeholder" width="1280" height="800"/>
-        <systemColor name="tertiarySystemGroupedBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

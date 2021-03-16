@@ -27,7 +27,7 @@ class DetailCharacterViewController: UIViewController, ViewInterface {
         self.myDetailTableView.dataSource = self
         
         self.myDetailTableView.register(UINib(nibName: HeaderDetailCell.defaultReuseIdentifier, bundle: nil), forCellReuseIdentifier: HeaderDetailCell.defaultReuseIdentifier)
-        
+        self.myDetailTableView.register(UINib(nibName: SeriesTableViewCell.defaultReuseIdentifier, bundle: nil), forCellReuseIdentifier: SeriesTableViewCell.defaultReuseIdentifier)
         self.myDetailTableView.register(UINib(nibName: SeriesTableCell.defaultReuseIdentifier, bundle: nil), forCellReuseIdentifier: SeriesTableCell.defaultReuseIdentifier)
 
         // Do any additional setup after loading the view.
@@ -76,6 +76,14 @@ extension DetailCharacterViewController: UITableViewDelegate, UITableViewDataSou
                 }
             }
             return cell
+        case 1:
+            let cell = myDetailTableView.dequeueReusableCell(withIdentifier: SeriesTableViewCell.defaultReuseIdentifier, for: indexPath) as! SeriesTableViewCell
+            self.presenter.getInfoSeries { (resultSeries) in
+                if let resultSeriesDes = resultSeries {
+                    cell.setArraySeries(data: resultSeriesDes)
+                }
+            }
+            return cell
         default:
             let cell = myDetailTableView.dequeueReusableCell(withIdentifier: SeriesTableCell.defaultReuseIdentifier, for: indexPath) as! SeriesTableCell
             self.presenter.getInfoComic(index: indexPath.row) { (result) in
@@ -89,6 +97,8 @@ extension DetailCharacterViewController: UITableViewDelegate, UITableViewDataSou
         switch indexPath.section {
         case 0:
             return 220
+        case 1:
+            return 280
         default:
             return UITableView.automaticDimension
         }
@@ -98,6 +108,8 @@ extension DetailCharacterViewController: UITableViewDelegate, UITableViewDataSou
         switch indexPath.section {
         case 0:
             return 220
+        case 1:
+            return 280
         default:
             return UITableView.automaticDimension
         }
