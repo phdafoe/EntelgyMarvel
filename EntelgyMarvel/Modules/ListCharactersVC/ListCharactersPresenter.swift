@@ -68,7 +68,4 @@ extension ListCharactersPresenter: ListCharactersPresenterViewInterface {
     internal func getModelDataCell(index: Int) -> ResultCharacter? {
         return (listCharacters?[index])!
     }
-    
-   
-    
 }
