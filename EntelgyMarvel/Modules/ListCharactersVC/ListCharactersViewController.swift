@@ -11,9 +11,8 @@ protocol ListCharactersViewPresenterInterface: ViewPresenterInterface {
     func reloadData()
 }
 
-class ListCharactersViewController: UIViewController, ViewInterface {
+class ListCharactersViewController: BaseViewController<ListCharactersPresenterProtocolOutput>, ReuseIdentifierInterfaceViewController {
     
-    var presenter: ListCharactersPresenterViewInterface!
     
     @IBOutlet weak var myCollectionView: UICollectionView!
     
@@ -23,7 +22,7 @@ class ListCharactersViewController: UIViewController, ViewInterface {
         self.myCollectionView.delegate = self
         self.myCollectionView.dataSource = self
         self.myCollectionView.register(UINib(nibName: CharacterCollectionViewCell.defaultReuseIdentifier, bundle: nil), forCellWithReuseIdentifier: CharacterCollectionViewCell.defaultReuseIdentifier)
-        self.presenter.loadCharacters(whit: .characters)
+        self.presenter?.loadCharacters(whit: .characters)
     }
     
 }
@@ -42,7 +41,7 @@ extension ListCharactersViewController: UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if let cellsForRows = self.presenter.getNumberOfRowCell() {
+        if let cellsForRows = self.presenter?.getNumberOfRowCell() {
             return cellsForRows
         }
         return 0
@@ -50,15 +49,15 @@ extension ListCharactersViewController: UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = self.myCollectionView.dequeueReusableCell(withReuseIdentifier: CharacterCollectionViewCell.defaultReuseIdentifier, for: indexPath) as! CharacterCollectionViewCell
-        if let dataModel = self.presenter.getModelDataCell(index: indexPath.row) {
+        if let dataModel = self.presenter?.getModelDataCell(index: indexPath.row) {
             cell.setupCell(data: dataModel)
         }
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let dataModel = self.presenter.getModelDataCell(index: indexPath.row) {
-            self.presenter.showDetailCharacterFromView(data: dataModel)
+        if let dataModel = self.presenter?.getModelDataCell(index: indexPath.row) {
+            self.presenter?.showDetailCharacterFromView(data: dataModel)
         }
     }
     

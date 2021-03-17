@@ -6,55 +6,39 @@
 //
 
 import Foundation
-import Kingfisher
 
-protocol ListCharactersPresenterRouterInterface: PresenterRouterInterface {
-    
-}
-
-protocol ListCharactersPresenterViewInterface: PresenterViewInterface {
+protocol ListCharactersPresenterProtocolOutput : class {
     func loadCharacters(whit endpoint: ListEndPoint)
     func getNumberOfRowCell() -> Int?
     func getModelDataCell(index: Int) -> ResultCharacter?
     func showDetailCharacterFromView(data: ResultCharacter)
 }
 
-final class ListCharactersPresenter: PresenterInterface {
-    
-    // Dependencies
-    var router: ListCharactersRouterPresenterInterface!
-    weak var view: ListCharactersViewPresenterInterface!
-    
+final class ListCharactersPresenter: BasePresenter<ListCharactersViewController, ListCharactersRouterProtocolOutput> {
+        
     var listCharacters: [ResultCharacter]? = []
     var error: NSError?
     
-    private let fetchService: ServiceManagerProtocol
-    
-    init(fetchService: ServiceManagerProtocol = StoreManager.shared) {
-        self.fetchService = fetchService
-    }
+    var provider: ServiceManagerProtocol!
+
  
 }
 
-extension ListCharactersPresenter: ListCharactersPresenterRouterInterface {
 
-   
-}
-
-extension ListCharactersPresenter: ListCharactersPresenterViewInterface {
+extension ListCharactersPresenter: ListCharactersPresenterProtocolOutput {
     func showDetailCharacterFromView(data: ResultCharacter) {
-        self.router.showDetailCharacter(data: data)
+        self.router?.showDetailCharacter(data: data)
     }
     
     
     internal func loadCharacters(whit endpoint: ListEndPoint) {
         self.listCharacters = nil
-        self.fetchService.fetchListCharacters(from: endpoint) { [weak self] (result) in
+        self.provider.fetchListCharacters(from: endpoint) { [weak self] (result) in
             guard let self = self else { return }
             switch result {
             case .success(let response):
                 self.listCharacters = response.data?.results
-                self.view.reloadData()
+                self.viewController?.reloadData()
             case .failure(let error):
                 self.error = error as NSError
             }

@@ -11,17 +11,15 @@ protocol DetailCharacterViewPresenterInterface: ViewPresenterInterface {
     func reloadData()
 }
 
-class DetailCharacterViewController: UIViewController, ViewInterface {
-
-    var presenter: DetailCharacterPresenterViewInterface!
+class DetailCharacterViewController: BaseViewController<DetailCharacterPresenterProtocolOutput>, ReuseIdentifierInterfaceViewController{
     
     @IBOutlet weak var myDetailTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.presenter.loadDetailCharacter(whit: .characters)
-        self.presenter.loadDetailSeries(whit: .characters)
+        self.presenter?.loadDetailCharacter(whit: .characters)
+        self.presenter?.loadDetailSeries(whit: .characters)
         
         self.myDetailTableView.delegate = self
         self.myDetailTableView.dataSource = self
@@ -33,13 +31,6 @@ class DetailCharacterViewController: UIViewController, ViewInterface {
         // Do any additional setup after loading the view.
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.myDetailTableView.reloadData()
-    }
-    
-    
-
 }
 
 extension DetailCharacterViewController: DetailCharacterViewPresenterInterface {
@@ -62,7 +53,7 @@ extension DetailCharacterViewController: UITableViewDelegate, UITableViewDataSou
         case 1:
             return 1
         default:
-            return self.presenter.getArrayItemComics()
+            return self.presenter?.getArrayItemComics() ?? 0
         }
     }
     
@@ -70,7 +61,7 @@ extension DetailCharacterViewController: UITableViewDelegate, UITableViewDataSou
         switch indexPath.section {
         case 0:
             let cell = myDetailTableView.dequeueReusableCell(withIdentifier: HeaderDetailCell.defaultReuseIdentifier, for: indexPath) as! HeaderDetailCell
-            self.presenter.getHeaderInfoOfRow { (resultHeader) in
+            self.presenter?.getHeaderInfoOfRow { (resultHeader) in
                 if let resultHeaderDes = resultHeader {
                     cell.setInfoHeaderView(data: resultHeaderDes)
                 }
@@ -78,7 +69,7 @@ extension DetailCharacterViewController: UITableViewDelegate, UITableViewDataSou
             return cell
         case 1:
             let cell = myDetailTableView.dequeueReusableCell(withIdentifier: SeriesTableViewCell.defaultReuseIdentifier, for: indexPath) as! SeriesTableViewCell
-            self.presenter.getInfoSeries { (resultSeries) in
+            self.presenter?.getInfoSeries { (resultSeries) in
                 if let resultSeriesDes = resultSeries {
                     cell.setArraySeries(data: resultSeriesDes)
                 }
@@ -86,7 +77,7 @@ extension DetailCharacterViewController: UITableViewDelegate, UITableViewDataSou
             return cell
         default:
             let cell = myDetailTableView.dequeueReusableCell(withIdentifier: SeriesTableCell.defaultReuseIdentifier, for: indexPath) as! SeriesTableCell
-            self.presenter.getInfoComic(index: indexPath.row) { (result) in
+            self.presenter?.getInfoComic(index: indexPath.row) { (result) in
                 cell.setInfo(data: result)
             }
             return cell

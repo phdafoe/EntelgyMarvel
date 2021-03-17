@@ -7,11 +7,9 @@
 
 import Foundation
 
-protocol DetailCharacterPresenterRouterInterface: PresenterRouterInterface {
 
-}
 
-protocol DetailCharacterPresenterViewInterface: PresenterViewInterface {
+protocol DetailCharacterPresenterProtocolOutput: class {
     func loadDetailCharacter(whit endpoint: ListEndPoint)
     func loadDetailSeries(whit endpoint:ListEndPoint)
     func getHeaderInfoOfRow(completion: @escaping (ResultCharacter?) -> Void)
@@ -21,37 +19,28 @@ protocol DetailCharacterPresenterViewInterface: PresenterViewInterface {
 }
 
 
-final class DetailCharacterPresenter: PresenterInterface {
-    
-    // Dependencies
-    var router: DetailCharacterRouterPresenterInterface!
-    weak var view: DetailCharacterViewPresenterInterface!
-    
+final class DetailCharacterPresenter: BasePresenter<DetailCharacterViewPresenterInterface, DetailCharacterRouterProtocolOutput> {
+        
     var listDetailComic: [ResultComic]? = []
     var listSeries: [ResultSeries]? = []
     var dataResult: ResultCharacter? = nil
     var error: NSError?
-    private let fetchService: ServiceManagerProtocol
+    var provider: ServiceManagerProtocol!
     
-    init(fetchService: ServiceManagerProtocol = StoreManager.shared) {
-        self.fetchService = fetchService
-    }
+    
     
 }
 
-extension DetailCharacterPresenter: DetailCharacterPresenterRouterInterface {
 
-}
-
-extension DetailCharacterPresenter: DetailCharacterPresenterViewInterface {
+extension DetailCharacterPresenter: DetailCharacterPresenterProtocolOutput {
     
     func loadDetailCharacter(whit endpoint: ListEndPoint) {
-        self.fetchService.fetchDetailCharacter(from: endpoint, id: "\(self.dataResult?.id ?? 0)", typeEndpoint: .comics) { [weak self] (result) in
+        self.provider.fetchDetailCharacter(from: endpoint, id: "\(self.dataResult?.id ?? 0)", typeEndpoint: .comics) { [weak self] (result) in
             guard let self = self else { return }
             switch result {
             case .success(let response):
                 self.listDetailComic = response.data?.results
-                self.view.reloadData()
+                self.viewController?.reloadData()
             case .failure(let error):
                 self.error = error as NSError
             }
@@ -59,12 +48,12 @@ extension DetailCharacterPresenter: DetailCharacterPresenterViewInterface {
     }
     
     func loadDetailSeries(whit endpoint: ListEndPoint) {
-        self.fetchService.fetchDetailSeries(from: endpoint, id: "\(self.dataResult?.id ?? 0)", typeEndpoint: .series) { [weak self] (result) in
+        self.provider.fetchDetailSeries(from: endpoint, id: "\(self.dataResult?.id ?? 0)", typeEndpoint: .series) { [weak self] (result) in
             guard let self = self else { return }
             switch result {
             case .success(let response):
                 self.listSeries = response.data?.results
-                self.view.reloadData()
+                self.viewController?.reloadData()
             case .failure(let error):
                 self.error = error as NSError
             }

@@ -8,16 +8,14 @@
 import Foundation
 import UIKit
 
-protocol ListComicsRouterPresenterInterface: RouterPresenterInterface {
+protocol ListComicsRouterProtocolOutput: class {
     //func showDetailCharacter(data: ResultCharacter)
 }
 
-final class ListComicsRouter: RouterInterface {
-    weak var presenter: ListComicsPresenterRouterInterface!
-    weak var viewController: UIViewController?
+final class ListComicsRouter: BaseRouter<ListComicsPresenterProtocolOutput> {
 }
 
-extension ListComicsRouter: ListComicsRouterPresenterInterface {
+extension ListComicsRouter: ListComicsRouterProtocolOutput {
 //    func showDetailCharacter(data: ResultCharacter) {
 //        let vc = DetailCharacterCoordinator().build(dto: DetailCharacterCoordinatorDTO(data: data))
 //        self.viewController?.navigationController?.pushViewController(vc, animated: true)

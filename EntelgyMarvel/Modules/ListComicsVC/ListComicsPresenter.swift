@@ -7,45 +7,35 @@
 
 import Foundation
 
-protocol ListComicsPresenterRouterInterface: PresenterRouterInterface {
-    
-}
 
-protocol ListComicsPresenterViewInterface: PresenterViewInterface {
+
+protocol ListComicsPresenterProtocolOutput: class {
     func loadComics(whit endpoint: ListEndPoint)
     func getNumberOfRowCell() -> Int?
     func getModelDataCell(index: Int) -> ResultComics?
 }
 
-final class ListComicsPresenter: PresenterInterface {
+final class ListComicsPresenter: BasePresenter<ListComicsViewPresenterInterface, ListComicsRouterProtocolOutput> {
     
-    // Dependencies
-    var router: ListComicsRouterPresenterInterface!
-    weak var view: ListComicsViewPresenterInterface!
     var listComics: [ResultComics]? = []
     var error: NSError?
     
-    private let fetchService: ServiceManagerProtocol
+    var provider: ServiceManagerProtocol!
     
-    init(fetchService: ServiceManagerProtocol = StoreManager.shared) {
-        self.fetchService = fetchService
-    }
  
 }
 
-extension ListComicsPresenter: ListComicsPresenterRouterInterface {
 
-}
 
-extension ListComicsPresenter: ListComicsPresenterViewInterface {
+extension ListComicsPresenter: ListComicsPresenterProtocolOutput {
     internal func loadComics(whit endpoint: ListEndPoint) {
         self.listComics = nil
-        self.fetchService.fetchListComics(from: endpoint) { [weak self] (result) in
+        self.provider.fetchListComics(from: endpoint) { [weak self] (result) in
             guard let self = self else { return }
             switch result {
             case .success(let response):
                 self.listComics = response.data?.results
-                self.view.reloadData()
+                self.viewController?.reloadData()
             case .failure(let error):
                 self.error = error as NSError
             }

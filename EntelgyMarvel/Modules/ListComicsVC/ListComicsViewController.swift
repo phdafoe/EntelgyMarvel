@@ -11,9 +11,7 @@ protocol ListComicsViewPresenterInterface: ViewPresenterInterface {
     func reloadData()
 }
 
-class ListComicsViewController: UIViewController, ViewInterface {
-
-    var presenter: ListComicsPresenterViewInterface!
+class ListComicsViewController: BaseViewController<ListComicsPresenterProtocolOutput>, ReuseIdentifierInterfaceViewController {
     
     @IBOutlet weak var myTableView: UITableView!
     
@@ -23,7 +21,7 @@ class ListComicsViewController: UIViewController, ViewInterface {
         self.myTableView.delegate = self
         self.myTableView.dataSource = self
         self.myTableView.register(UINib(nibName: ComicsTableViewCell.defaultReuseIdentifier, bundle: nil), forCellReuseIdentifier: ComicsTableViewCell.defaultReuseIdentifier)
-        self.presenter.loadComics(whit: .comics)
+        self.presenter?.loadComics(whit: .comics)
 
         // Do any additional setup after loading the view.
     }
@@ -46,12 +44,12 @@ extension ListComicsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.presenter.getNumberOfRowCell() ?? 0
+        return self.presenter?.getNumberOfRowCell() ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.myTableView.dequeueReusableCell(withIdentifier: ComicsTableViewCell.defaultReuseIdentifier, for: indexPath) as! ComicsTableViewCell
-        cell.setupCell(data: self.presenter.getModelDataCell(index: indexPath.row))
+        cell.setupCell(data: self.presenter?.getModelDataCell(index: indexPath.row))
         return cell
     }
     

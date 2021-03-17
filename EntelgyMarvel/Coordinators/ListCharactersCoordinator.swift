@@ -6,28 +6,39 @@
 //
 
 import Foundation
-import UIKit
 
 // MARK: - module builder
 
-final class ListCharactersAssembly: MVPProtocol {
-
-    typealias View = ListCharactersViewController
-    typealias Presenter = ListCharactersPresenter
-    typealias Router = ListCharactersRouter
+final class ListCharactersAssembly {
     
-    func navigation() -> UINavigationController {
-        let navVC = UINavigationController(rootViewController: self.build())
-        return navVC
+    static func buildNavigation() -> BaseNavigationController {
+        let navigationController = BaseNavigationController(rootViewController: buildViewController())
+        return navigationController
     }
-
-    func build() -> UIViewController {
-        let view = View()
-        let presenter = Presenter()
-        let router = Router()
-        self.assemble(view: view, presenter: presenter, router: router)
-        router.viewController = view
-        return view
+    
+    static func buildViewController() -> ListCharactersViewController {
+        let viewController = ListCharactersViewController(nibName: ListCharactersViewController.defaultReuseIdentifierViewController, bundle: nil)
+        viewController.presenter = buildPresenter(viewController: viewController)
+        return viewController
     }
+    
+    static fileprivate func buildPresenter(viewController: ListCharactersViewController) -> ListCharactersPresenterProtocolOutput {
+        let presenter = ListCharactersPresenter(viewController: viewController)
+        presenter.provider = buildProvider()
+        presenter.router = buildRouter(viewController: viewController, presenter: presenter)
+        
+        return presenter
+    }
+    
+    static fileprivate func buildRouter(viewController: ListCharactersViewController, presenter : ListCharactersPresenterProtocolOutput) -> ListCharactersRouterProtocolOutput {
+        let router = ListCharactersRouter(presenter: presenter, view: viewController)
+        return router
+    }
+    
+    static func buildProvider() -> ServiceManagerProtocol {
+        let provider = StoreManager.shared
+        return provider
+    }
+    
 }
 

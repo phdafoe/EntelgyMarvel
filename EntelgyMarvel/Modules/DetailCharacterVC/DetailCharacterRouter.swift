@@ -8,16 +8,14 @@
 import Foundation
 import UIKit
 
-protocol DetailCharacterRouterPresenterInterface: RouterPresenterInterface {
+protocol DetailCharacterRouterProtocolOutput: RouterPresenterInterface {
 
     
 }
 
-final class DetailCharacterRouter: RouterInterface {
-    weak var presenter: DetailCharacterPresenterRouterInterface!
-    weak var viewController: UIViewController?
+final class DetailCharacterRouter: BaseRouter<DetailCharacterPresenterProtocolOutput> {
 }
 
-extension DetailCharacterRouter: DetailCharacterRouterPresenterInterface {
+extension DetailCharacterRouter: DetailCharacterRouterProtocolOutput {
 
 }

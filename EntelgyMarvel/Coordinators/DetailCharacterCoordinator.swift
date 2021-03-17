@@ -10,21 +10,37 @@ import UIKit
 
 // MARK: - module builder
 
-final class DetailCharacterCoordinator: MVPProtocol {
-
-    typealias View = DetailCharacterViewController
-    typealias Presenter = DetailCharacterPresenter
-    typealias Router = DetailCharacterRouter
-
-    func build(dto: DetailCharacterCoordinatorDTO? = nil) -> UIViewController {
-        let view = View()
-        let presenter = Presenter()
-        presenter.dataResult = dto?.data
-        let router = Router()
-        self.assemble(view: view, presenter: presenter, router: router)
-        router.viewController = view
-        return view
+final class DetailCharacterAssembly {
+    
+    static func buildNavigation() -> BaseNavigationController {
+        let navigationController = BaseNavigationController(rootViewController: buildViewController())
+        return navigationController
     }
+    
+    static func buildViewController(dto: DetailCharacterCoordinatorDTO? = nil) -> DetailCharacterViewController {
+        let viewController = DetailCharacterViewController(nibName: DetailCharacterViewController.defaultReuseIdentifierViewController, bundle: nil)
+        viewController.presenter = buildPresenter(dto: dto, viewController: viewController)
+        return viewController
+    }
+    
+    static fileprivate func buildPresenter(dto: DetailCharacterCoordinatorDTO? = nil, viewController: DetailCharacterViewController) -> DetailCharacterPresenterProtocolOutput {
+        let presenter = DetailCharacterPresenter(viewController: viewController)
+        presenter.dataResult = dto?.data
+        presenter.provider = buildProvider()
+        presenter.router = buildRouter(viewController: viewController, presenter: presenter)
+        return presenter
+    }
+    
+    static fileprivate func buildRouter(viewController: DetailCharacterViewController, presenter : DetailCharacterPresenterProtocolOutput) -> DetailCharacterRouterProtocolOutput {
+        let router = DetailCharacterRouter(presenter: presenter, view: viewController)
+        return router
+    }
+    
+    static func buildProvider() -> ServiceManagerProtocol {
+        let provider = StoreManager.shared
+        return provider
+    }
+    
 }
 
 struct DetailCharacterCoordinatorDTO {

@@ -75,8 +75,18 @@ public protocol ReuseIdentifierProtocol : class {
     static var defaultReuseIdentifier : String{get}
 }
 
+public protocol ReuseIdentifierInterfaceViewController : class{
+    static var defaultReuseIdentifierViewController : String {get}
+}
+
 public extension ReuseIdentifierProtocol where Self : UIView {
     static var defaultReuseIdentifier : String{
+        return NSStringFromClass(self).components(separatedBy: ".").last!
+    }
+}
+
+public extension ReuseIdentifierInterfaceViewController where Self : UIViewController{
+    static var defaultReuseIdentifierViewController : String{
         return NSStringFromClass(self).components(separatedBy: ".").last!
     }
 }
