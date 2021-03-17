@@ -47,16 +47,12 @@ class BaseRouter<P> {
     internal var presenter: P?
     internal var viewController: UIViewController?
     
-    
-    //MARK: LIFE CYCLE
-    //Class initializer
     convenience init(presenter: P? = nil, view: UIViewController? = nil) {
         self.init()
         self.presenter = presenter
         self.viewController = view
     }
     
-    //MARK: PRIVATE
     internal func show(_ vc: UIViewController){
         if let navigationController = viewController?.navigationController {
             DispatchQueue.main.async {
