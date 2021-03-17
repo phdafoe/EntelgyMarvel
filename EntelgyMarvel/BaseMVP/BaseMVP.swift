@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+// MARK: - BaseNavigationController
 class BaseNavigationController: UINavigationController {
     
     //MARK: LIFE CYCLE
@@ -21,10 +22,12 @@ class BaseNavigationController: UINavigationController {
     
 }
 
+// MARK: - BaseViewController
 class BaseViewController <T>: UIViewController {
      var presenter: T?
 }
 
+// MARK: - BasePresenter
 class BasePresenter <T, U> {
     
     internal var viewController: T?
@@ -38,6 +41,7 @@ class BasePresenter <T, U> {
     
 }
 
+// MARK: - BaseRouter
 class BaseRouter<P> {
     
     internal var presenter: P?
@@ -67,65 +71,6 @@ class BaseRouter<P> {
             return
         }
         viewController?.present(viewControllerToPresent, animated: flag, completion: completion)
-    }
-}
-
-
-
-// MARK: - Protocols
-public protocol RouterPresenterInterface: class {
-
-}
-
-public protocol PresenterRouterInterface: class {
-
-}
-
-public protocol PresenterViewInterface: class {
-
-}
-
-public protocol ViewPresenterInterface: class {
-
-}
-
-// MARK: - MVP
-public protocol RouterInterface: RouterPresenterInterface {
-    associatedtype PresenterRouter
-    var presenter: PresenterRouter! { get set }
-}
-
-public protocol PresenterInterface: PresenterRouterInterface & PresenterViewInterface {
-    associatedtype RouterPresenter
-    associatedtype ViewPresenter
-    var router: RouterPresenter! { get set }
-    var view: ViewPresenter! { get set }
-}
-
-public protocol ViewInterface: ViewPresenterInterface {
-    associatedtype PresenterView
-    var presenter: PresenterView! { get set }
-}
-
-public protocol EntityInterface {
-
-}
-
-public protocol MVPProtocol {
-    
-    associatedtype View where View: ViewInterface
-    associatedtype Presenter where Presenter: PresenterInterface
-    associatedtype Router where Router: RouterInterface
-    
-}
-
-public extension MVPProtocol {
-
-    func assemble(view: View, presenter: Presenter, router: Router) {
-        view.presenter = (presenter as? Self.View.PresenterView)
-        presenter.view = (view as? Self.Presenter.ViewPresenter)
-        presenter.router = (router as? Self.Presenter.RouterPresenter)
-        router.presenter = (presenter as? Self.Router.PresenterRouter)
     }
 }
 

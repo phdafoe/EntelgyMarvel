@@ -6,7 +6,7 @@
 import Foundation
 
 // MARK: - DetailSeriesModel
-struct DetailSeriesModel: EntityInterface, Decodable  {
+struct DetailSeriesModel: Decodable  {
     let code: Int?
     let status: String?
     let copyright: String?
@@ -27,7 +27,7 @@ struct DetailSeriesModel: EntityInterface, Decodable  {
 }
 
 // MARK: - DataClass
-struct DataClassSeries: EntityInterface, Decodable  {
+struct DataClassSeries: Decodable  {
     let offset: Int?
     let limit: Int?
     let total: Int?
@@ -44,7 +44,7 @@ struct DataClassSeries: EntityInterface, Decodable  {
 }
 
 // MARK: - Result
-struct ResultSeries: EntityInterface, Decodable  {
+struct ResultSeries: Decodable  {
     let id: Int?
     let title: String?
     let resultDescription: String?
@@ -89,7 +89,7 @@ struct ResultSeries: EntityInterface, Decodable  {
 
 
 // MARK: - Next
-struct Next: EntityInterface, Decodable  {
+struct Next: Decodable  {
     let resourceURI: String?
     let name: String?
 

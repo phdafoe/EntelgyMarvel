@@ -6,7 +6,7 @@
 import Foundation
 
 // MARK: - ListCharacteresModel
-struct ListCharacteresModel: EntityInterface, Decodable {
+struct ListCharacteresModel: Decodable {
     let code: Int?
     let status: String?
     let copyright: String?
@@ -27,7 +27,7 @@ struct ListCharacteresModel: EntityInterface, Decodable {
 }
 
 // MARK: - DataClass
-struct DataClassCharacters: EntityInterface, Decodable  {
+struct DataClassCharacters: Decodable  {
     let offset: Int?
     let limit: Int?
     let total: Int?
@@ -44,7 +44,7 @@ struct DataClassCharacters: EntityInterface, Decodable  {
 }
 
 // MARK: - Result
-struct ResultCharacter: EntityInterface, Decodable  {
+struct ResultCharacter: Decodable  {
     let id: Int?
     let name: String?
     let resultDescription: String?
@@ -73,7 +73,7 @@ struct ResultCharacter: EntityInterface, Decodable  {
 }
 
 // MARK: - Comics
-struct Comics: EntityInterface, Decodable  {
+struct Comics: Decodable  {
     let available: Int?
     let collectionURI: String?
     let items: [ComicsItem]?
@@ -88,7 +88,7 @@ struct Comics: EntityInterface, Decodable  {
 }
 
 // MARK: - ComicsItem
-struct ComicsItem: EntityInterface, Decodable  {
+struct ComicsItem: Decodable  {
     let resourceURI: String?
     let name: String?
 
@@ -99,7 +99,7 @@ struct ComicsItem: EntityInterface, Decodable  {
 }
 
 // MARK: - Events
-struct Events: EntityInterface, Decodable  {
+struct Events: Decodable  {
     let available: Int?
     let collectionURI: String?
     let items: [JSONAny]?
@@ -116,7 +116,7 @@ struct Events: EntityInterface, Decodable  {
 
 
 // MARK: - Thumbnail
-struct Thumbnail: EntityInterface, Decodable  {
+struct Thumbnail: Decodable  {
     let path: String?
     let thumbnailExtension: String?
 

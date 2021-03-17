@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol ListCharactersViewPresenterInterface: ViewPresenterInterface {
+protocol ListCharactersViewPresenterInterface: class {
     func reloadData()
 }
 

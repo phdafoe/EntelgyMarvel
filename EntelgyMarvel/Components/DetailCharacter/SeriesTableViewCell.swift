@@ -23,13 +23,11 @@ class SeriesTableViewCell: UITableViewCell, ReuseIdentifierProtocol, SeriesTable
         self.myCollectionView.delegate = self
         self.myCollectionView.dataSource = self
         self.myCollectionView.register(UINib(nibName: SeriesCollectionViewCell.defaultReuseIdentifier, bundle: nil), forCellWithReuseIdentifier: SeriesCollectionViewCell.defaultReuseIdentifier)
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
     
     internal func setArraySeries(data: [ResultSeries]) {

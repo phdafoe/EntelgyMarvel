@@ -6,7 +6,7 @@
 import Foundation
 
 // MARK: - ListComicsModel
-struct ListComicsModel: EntityInterface, Decodable {
+struct ListComicsModel: Decodable {
     let code: Int?
     let status: String?
     let copyright: String?
@@ -27,7 +27,7 @@ struct ListComicsModel: EntityInterface, Decodable {
 }
 
 // MARK: - DataClass
-struct DataClassComics: EntityInterface, Decodable {
+struct DataClassComics: Decodable {
     let offset: Int?
     let limit: Int?
     let total: Int?
@@ -44,7 +44,7 @@ struct DataClassComics: EntityInterface, Decodable {
 }
 
 // MARK: - Result
-struct ResultComics: EntityInterface, Decodable {
+struct ResultComics: Decodable {
     let id: Int?
     let digitalId: Int?
     let title: String?

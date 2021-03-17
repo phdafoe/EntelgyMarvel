@@ -6,7 +6,7 @@
 import Foundation
 
 // MARK: - DetailComicModel
-struct DetailComicModel: EntityInterface, Decodable {
+struct DetailComicModel: Decodable {
     let code: Int?
     let status: String?
     let copyright: String?
@@ -27,7 +27,7 @@ struct DetailComicModel: EntityInterface, Decodable {
 }
 
 // MARK: - DataClass
-struct DataClass: EntityInterface, Decodable {
+struct DataClass: Decodable {
     let offset: Int?
     let limit: Int?
     let total: Int?
@@ -44,7 +44,7 @@ struct DataClass: EntityInterface, Decodable {
 }
 
 // MARK: - Result
-struct ResultComic: EntityInterface, Decodable {
+struct ResultComic: Decodable {
     let id: Int?
     let digitalId: Int?
     let title: String?
@@ -151,7 +151,7 @@ struct ResultComic: EntityInterface, Decodable {
 }
 
 // MARK: - Characters
-struct Characters: EntityInterface, Decodable {
+struct Characters: Decodable {
     let available: Int?
     let collectionURI: String?
     let items: [Series]?
@@ -166,7 +166,7 @@ struct Characters: EntityInterface, Decodable {
 }
 
 // MARK: - Series
-struct Series: EntityInterface, Decodable {
+struct Series: Decodable {
     let resourceURI: String?
     let name: String?
 
@@ -177,7 +177,7 @@ struct Series: EntityInterface, Decodable {
 }
 
 // MARK: - Creators
-struct Creators: EntityInterface, Decodable {
+struct Creators: Decodable {
     let available: Int?
     let collectionURI: String?
     let items: [CreatorsItem]?
@@ -192,7 +192,7 @@ struct Creators: EntityInterface, Decodable {
 }
 
 // MARK: - CreatorsItem
-struct CreatorsItem: EntityInterface, Decodable {
+struct CreatorsItem: Decodable {
     let resourceURI: String?
     let name: String?
     let role: String?
@@ -205,7 +205,7 @@ struct CreatorsItem: EntityInterface, Decodable {
 }
 
 // MARK: - DateElement
-struct DateElement: EntityInterface, Decodable {
+struct DateElement: Decodable {
     let type: String?
     let date: String?
 
@@ -218,7 +218,7 @@ struct DateElement: EntityInterface, Decodable {
 
 
 // MARK: - Price
-struct Price: EntityInterface, Decodable {
+struct Price: Decodable {
     let type: String?
     let price: Double?
 
@@ -229,7 +229,7 @@ struct Price: EntityInterface, Decodable {
 }
 
 // MARK: - Stories
-struct Stories: EntityInterface, Decodable {
+struct Stories: Decodable {
     let available: Int?
     let collectionURI: String?
     let items: [StoriesItem]?
@@ -244,7 +244,7 @@ struct Stories: EntityInterface, Decodable {
 }
 
 // MARK: - StoriesItem
-struct StoriesItem: EntityInterface, Decodable {
+struct StoriesItem: Decodable {
     let resourceURI: String?
     let name: String?
     let type: String?
@@ -257,7 +257,7 @@ struct StoriesItem: EntityInterface, Decodable {
 }
 
 // MARK: - TextObject
-struct TextObject: EntityInterface, Decodable {
+struct TextObject: Decodable {
     let type: String?
     let language: String?
     let text: String?
@@ -270,7 +270,7 @@ struct TextObject: EntityInterface, Decodable {
 }
 
 // MARK: - URLElement
-struct URLElement: EntityInterface, Decodable {
+struct URLElement: Decodable {
     let type: String?
     let url: String?
 

@@ -21,7 +21,6 @@ class SeriesCollectionViewCell: UICollectionViewCell, ReuseIdentifierProtocol, S
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
     private func setupView() {

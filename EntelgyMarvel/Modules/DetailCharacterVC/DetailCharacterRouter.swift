@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-protocol DetailCharacterRouterProtocolOutput: RouterPresenterInterface {
+protocol DetailCharacterRouterProtocolOutput: class {
 
     
 }
