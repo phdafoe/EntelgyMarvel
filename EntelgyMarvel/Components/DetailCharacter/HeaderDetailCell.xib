@@ -20,33 +20,30 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qAo-ap-bhS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
                     </imageView>
-                    <view alpha="0.84999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iXD-22-qaz">
-                        <rect key="frame" x="0.0" y="146" width="320" height="54"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfU-Bf-dzO">
-                                <rect key="frame" x="8" y="25" width="304" height="21"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" systemColor="systemRedColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="degradado" translatesAutoresizingMaskIntoConstraints="NO" id="9UM-C5-3BS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="54" id="GNi-ZM-4dk"/>
-                            <constraint firstItem="dfU-Bf-dzO" firstAttribute="leading" secondItem="iXD-22-qaz" secondAttribute="leading" constant="8" id="fm6-Si-yye"/>
-                            <constraint firstAttribute="trailing" secondItem="dfU-Bf-dzO" secondAttribute="trailing" constant="8" id="gEH-BL-suu"/>
-                            <constraint firstAttribute="bottom" secondItem="dfU-Bf-dzO" secondAttribute="bottom" constant="8" id="v8D-OJ-zFC"/>
+                            <constraint firstAttribute="height" constant="200" id="f1r-Wm-29F"/>
                         </constraints>
-                    </view>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfU-Bf-dzO">
+                        <rect key="frame" x="8" y="171" width="304" height="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <color key="textColor" systemColor="systemRedColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="iXD-22-qaz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="77I-r5-WoW"/>
+                    <constraint firstItem="dfU-Bf-dzO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="BVx-7z-229"/>
                     <constraint firstItem="qAo-ap-bhS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="CZh-2n-yz5"/>
+                    <constraint firstItem="9UM-C5-3BS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Lkp-7J-0ay"/>
+                    <constraint firstAttribute="trailing" secondItem="9UM-C5-3BS" secondAttribute="trailing" id="Nb3-bY-Nw8"/>
                     <constraint firstAttribute="bottom" secondItem="qAo-ap-bhS" secondAttribute="bottom" id="Q9J-CL-AqX"/>
-                    <constraint firstAttribute="trailing" secondItem="iXD-22-qaz" secondAttribute="trailing" id="Uh9-UA-chO"/>
-                    <constraint firstAttribute="bottom" secondItem="iXD-22-qaz" secondAttribute="bottom" id="Ycc-EB-hIW"/>
+                    <constraint firstAttribute="bottom" secondItem="9UM-C5-3BS" secondAttribute="bottom" id="bJb-pl-lOa"/>
                     <constraint firstAttribute="trailing" secondItem="qAo-ap-bhS" secondAttribute="trailing" id="m7q-Dj-hop"/>
+                    <constraint firstAttribute="bottom" secondItem="dfU-Bf-dzO" secondAttribute="bottom" constant="8" id="m9d-3h-FUR"/>
                     <constraint firstItem="qAo-ap-bhS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="uWm-Xz-dwx"/>
+                    <constraint firstAttribute="trailing" secondItem="dfU-Bf-dzO" secondAttribute="trailing" constant="8" id="xb1-yE-GIK"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -58,6 +55,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="degradado" width="320" height="70"/>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

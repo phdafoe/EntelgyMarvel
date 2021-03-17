@@ -22,6 +22,12 @@
                             <constraint firstAttribute="height" constant="484" id="ME8-Ca-Umu"/>
                         </constraints>
                     </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="degradado" translatesAutoresizingMaskIntoConstraints="NO" id="0tg-Aa-FeK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="484"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="484" id="tIq-V4-0G7"/>
+                        </constraints>
+                    </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="Ys9-xZ-c0g">
                         <rect key="frame" x="8" y="502" width="304" height="161"/>
                         <subviews>
@@ -107,13 +113,16 @@
                 </subviews>
                 <color key="backgroundColor" red="0.10419365279999999" green="0.10419365279999999" blue="0.10419365279999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
+                    <constraint firstItem="0tg-Aa-FeK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="4bg-eA-fjq"/>
                     <constraint firstAttribute="trailing" secondItem="nqA-Mv-w2U" secondAttribute="trailing" id="6al-ih-fw9"/>
                     <constraint firstAttribute="trailing" secondItem="Ys9-xZ-c0g" secondAttribute="trailing" constant="8" id="A8U-NM-XZd"/>
                     <constraint firstItem="nqA-Mv-w2U" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="XXG-cX-Fvj"/>
+                    <constraint firstAttribute="trailing" secondItem="0tg-Aa-FeK" secondAttribute="trailing" id="YDf-yG-BS9"/>
                     <constraint firstItem="Ys9-xZ-c0g" firstAttribute="top" secondItem="nqA-Mv-w2U" secondAttribute="bottom" constant="18" id="YHG-mV-F2b"/>
                     <constraint firstAttribute="bottom" secondItem="Ys9-xZ-c0g" secondAttribute="bottom" constant="16" id="mBN-Eq-puh"/>
                     <constraint firstItem="Ys9-xZ-c0g" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="nnQ-OI-9jW"/>
                     <constraint firstItem="nqA-Mv-w2U" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="pEc-hp-2mg"/>
+                    <constraint firstItem="Ys9-xZ-c0g" firstAttribute="top" secondItem="0tg-Aa-FeK" secondAttribute="bottom" constant="18" id="yBP-KW-bUe"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -127,4 +136,7 @@
             <point key="canvasLocation" x="-155.07246376811597" y="337.16517857142856"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="degradado" width="320" height="70"/>
+    </resources>
 </document>

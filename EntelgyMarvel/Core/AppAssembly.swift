@@ -28,14 +28,14 @@ final class AppAssembly {
         let tabBar = UITabBar.appearance()
         let toolBar = UIToolbar.appearance()
         
-        navBar.barTintColor = Helpers.Colores().AZUL_NAV
-        tabBar.barTintColor = Helpers.Colores().AZUL_NAV
+        navBar.barTintColor = Helpers.Colores().GRAY_NAV
+        tabBar.barTintColor = Helpers.Colores().GRAY_NAV
         
-        toolBar.barTintColor = Helpers.Colores().AZUL_NAV
-        toolBar.tintColor = Helpers.Colores().BLANCO_TEXTO_NAV
+        toolBar.barTintColor = Helpers.Colores().GRAY_NAV
+        toolBar.tintColor = Helpers.Colores().GRAY_NAV
         
         navBar.tintColor = Helpers.Colores().BLANCO_TEXTO_NAV
-        tabBar.tintColor = Helpers.Colores().BLANCO_TEXTO_NAV
+        tabBar.tintColor = Helpers.Colores().RED_ICON
         
         navBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor :  Helpers.Colores().BLANCO_TEXTO_NAV]
     }
