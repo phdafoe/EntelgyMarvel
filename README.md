@@ -80,8 +80,9 @@ Fundamentalmente se modulariza cada funcionalidad nueva y se crea el Patrón MVP
 2. Carpetas Modulos(MVP)
 ![CarpetasModulos](https://github.com/phdafoe/EntelgyMarvel/blob/main/CarpetasModulos.png)
 3. Contenido Módulo
+![ContenidoModulo](https://github.com/phdafoe/EntelgyMarvel/blob/main/ContenidoModulo.png)
 
-## Implementación de Clean Code
+## Implementación de Clean Code 
 Este patrón permite separar la Interfza del Modelo de datos perfectamente, implementando los principios [SOLID](https://profile.es/blog/principios-solid-desarrollo-software-calidad/)
 
 ¿Cuál es el papel del presentador?
@@ -89,7 +90,7 @@ El [tío Bob](http://cleancoder.com/products) dice:
 
 El trabajo del **ViewModel/Presenter** es volver a empaquetar OutputData en una forma visible para la vista. **ViewModel/Presenter** contiene principalmente cadenas y banderas que la vista usa para mostrar los datos. El **ViewModel/Presenter** cargará con las cadenas correspondientes ya formateadas correctamente para el usuario. etc..
 
-## Especificaciones
+## Especificaciones de la prueba
 
 ### Uso de la Api de Marvel para la App
 Se utiliza la Api de [Marvel](https://developer.marvel.com/documentation/getting_started) para realizar la App, en ella es necesario crear una cuenta para obtener la clave de Api pata poder realizar la llamadas necesarias, una vez que realizas el registro, y con las claves, se monta un StoreManager que se encargará de hacer las llamadas necesarias.
@@ -111,7 +112,6 @@ Se tiene en cuenta también la implementación de [Kingfisher](https://github.co
 ### Instalación de dependencias (SPM)
 Se usa [Swift Package Manager](https://swift.org/package-manager/), aprovachando que el proyecto esta creado en la version de Xcode 12.3.
 
-
 ### Implementación de Test Unitarios
-Se han construido algunos Test con XCTest
+Se han construido algunos Test con XCTest, para comprobar llamadas del tipo Mock.
 
