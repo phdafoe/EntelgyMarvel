@@ -71,12 +71,21 @@ class BaseRouter<P> {
     }
 }
 ~~~
-## Uso de la Api de Marvel para la App
+## Especificaciones
+
+### Uso de la Api de Marvel para la App
 Se utiliza la Api de [Marvel](https://developer.marvel.com/documentation/getting_started) para realizar la App, en ella es necesario crear una cuenta para obtener la clave de Api pata poder realizar la llamadas necesarias, una vez que realizas el registro, y con las claves, se monta un StoreManager que se encargará de hacer las llamadas necesarias.
 
-### Estructura del ServiceManager
+- ![Marvel1](https://github.com/phdafoe/EntelgyMarvel/blob/main/Marvel1.png)
+- ![Marvel2](https://github.com/phdafoe/EntelgyMarvel/blob/main/Marvel2.png)
 
+### Estructura del ServiceManager - StoreManager
 
+- ![ServiceManager](https://github.com/phdafoe/EntelgyMarvel/blob/main/ServiceManager.png)
+- ![StoreManager1](https://github.com/phdafoe/EntelgyMarvel/blob/main/StoreManager1.png)
+- ![StoreManager2](https://github.com/phdafoe/EntelgyMarvel/blob/main/StoreManager2.png)
+
+Se tiene en cuenta para realizar las llamadas la implementacion de [CryptoSwift](https://github.com/krzyzanowskim/CryptoSwift), para generar el respectivo hash, requisito de la Api
 
 ● Creatividad para resolver los requerimientos.
 ● Calidad del código entregado (estructura y buenas prácticas).
@@ -86,9 +95,10 @@ Se utiliza la Api de [Marvel](https://developer.marvel.com/documentation/getting
 ## Descripción
 Se solicita la creación de la estructura de una app que muestre un listado de los personajes Marvel y permite ver el detalle de cada uno de ellos de manera individual.
 
-## Especificaciones
-1. Hace uso de la API de [Marvel](https://developer.marvel.com/docs)
-2. Obtener el listado de personajes
+
+1. Se hace uso de la API de [Marvel](https://developer.marvel.com/docs)
+
+3. Obtener el listado de personajes
 
 ## Funcionalidad
 1. Listas el listado de personajes
