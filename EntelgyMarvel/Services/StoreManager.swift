@@ -76,14 +76,11 @@ class StoreManager: ServiceManagerProtocol {
         if let paramsDes = params {
             queryItemsArray.append(contentsOf: paramsDes.map { URLQueryItem(name: $0.key, value: $0.value)})
         }
-        
         urlComponents.queryItems = queryItemsArray
-        
         guard let finalURL = urlComponents.url else {
             completion(.failure(.invalidEndpoint))
             return
         }
-        
         Utils.BaseURL().urlSession.dataTask(with: finalURL) { [weak self] (data, response, error) in
             guard let self = self else { return }
             if error != nil{
@@ -104,9 +101,7 @@ class StoreManager: ServiceManagerProtocol {
             } catch {
                 self.executeCompletionHandlerInMainThread(whit: .failure(.serializationError), completion: completion)
             }
-            
         }.resume()
-          
     }
     
     private func executeCompletionHandlerInMainThread<D: Decodable>(whit result: Result<D, ApiError>, completion: @escaping (Result<D, ApiError>) -> ()) {
