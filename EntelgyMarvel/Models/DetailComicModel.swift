@@ -110,44 +110,13 @@ struct ResultComic: Decodable {
     func formatDate(date: String) -> String {
        let dateFormatterGet = DateFormatter()
        dateFormatterGet.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
-
        let dateFormatter = DateFormatter()
        dateFormatter.dateStyle = .medium
        dateFormatter.timeStyle = .none
-       //    dateFormatter.locale = Locale(identifier: "en_US") //uncomment if you don't want to get the system default format.
-
        let dateObj: Date? = dateFormatterGet.date(from: date)
-
        return dateFormatter.string(from: dateObj!)
     }
     
-//    static private let yearFormatter: DateFormatter = {
-//        let dateFormatter = DateFormatter()
-//        dateFormatter.dateStyle = .medium
-//        dateFormatter.timeStyle = .none
-//        dateFormatter.locale = Locale.current
-//        return dateFormatter.string(from: date)
-//        //print(dateFormatter.string(from: date))
-////        let dateFormatterGet = DateFormatter()
-////        dateFormatterGet.dateFormat = "yyyy-MM-dd HH:mm:ss"
-////
-////        let dateFormatterPrint = DateFormatter()
-////        dateFormatterPrint.dateFormat = "MMM dd,yyyy"
-////
-//////        if let date = dateFormatterGet.date(from: modified!) {
-//////            print(dateFormatterPrint.string(from: date))
-//////        } else {
-//////           print("There was an error decoding the string")
-//////        }
-////        return dateFormatterPrint
-//    }()
-    
-//    var yearText: String {
-//        guard let releaseDateDes = self.modified, let date = yearFormatter.date(from: releaseDateDes) else {
-//            return "n/a"
-//        }
-//        return ResultComic.yearFormatter.string(from: date)
-//    }
 }
 
 // MARK: - Characters

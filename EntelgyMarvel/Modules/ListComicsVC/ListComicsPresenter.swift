@@ -7,10 +7,8 @@
 
 import Foundation
 
-
-
 protocol ListComicsPresenterProtocolOutput: class {
-    func loadComics(whit endpoint: ListEndPoint)
+    func loadComics(with endpoint: ListEndPoint)
     func getNumberOfRowCell() -> Int?
     func getModelDataCell(index: Int) -> ResultComics?
 }
@@ -28,7 +26,7 @@ final class ListComicsPresenter: BasePresenter<ListComicsViewPresenterInterface,
 
 
 extension ListComicsPresenter: ListComicsPresenterProtocolOutput {
-    internal func loadComics(whit endpoint: ListEndPoint) {
+    internal func loadComics(with endpoint: ListEndPoint) {
         self.listComics = nil
         self.provider.fetchListComics(from: endpoint) { [weak self] (result) in
             guard let self = self else { return }

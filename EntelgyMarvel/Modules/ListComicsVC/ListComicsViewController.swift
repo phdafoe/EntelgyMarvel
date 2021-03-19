@@ -21,7 +21,7 @@ class ListComicsViewController: BaseViewController<ListComicsPresenterProtocolOu
         self.myTableView.delegate = self
         self.myTableView.dataSource = self
         self.myTableView.register(UINib(nibName: ComicsTableViewCell.defaultReuseIdentifier, bundle: nil), forCellReuseIdentifier: ComicsTableViewCell.defaultReuseIdentifier)
-        self.presenter?.loadComics(whit: .comics)
+        self.presenter?.loadComics(with: .comics)
 
         // Do any additional setup after loading the view.
     }

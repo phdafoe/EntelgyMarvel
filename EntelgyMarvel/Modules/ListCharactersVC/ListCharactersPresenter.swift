@@ -8,19 +8,17 @@
 import Foundation
 
 protocol ListCharactersPresenterProtocolOutput : class {
-    func loadCharacters(whit endpoint: ListEndPoint)
+    func loadCharacters(with endpoint: ListEndPoint)
     func getNumberOfRowCell() -> Int?
     func getModelDataCell(index: Int) -> ResultCharacter?
     func showDetailCharacterFromView(data: ResultCharacter)
 }
 
 final class ListCharactersPresenter: BasePresenter<ListCharactersViewController, ListCharactersRouterProtocolOutput> {
-        
+    
     var listCharacters: [ResultCharacter]? = []
     var error: NSError?
-    
     var provider: ServiceManagerProtocol!
-
  
 }
 
@@ -31,7 +29,7 @@ extension ListCharactersPresenter: ListCharactersPresenterProtocolOutput {
     }
     
     
-    internal func loadCharacters(whit endpoint: ListEndPoint) {
+    internal func loadCharacters(with endpoint: ListEndPoint) {
         self.listCharacters = nil
         self.provider.fetchListCharacters(from: endpoint) { [weak self] (result) in
             guard let self = self else { return }

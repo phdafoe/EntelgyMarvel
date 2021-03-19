@@ -11,17 +11,19 @@
 		B416E00E25FBC4C0008CCF7A /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B416E00D25FBC4C0008CCF7A /* ServiceManager.swift */; };
 		B416E01325FBC4CA008CCF7A /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B416E01225FBC4CA008CCF7A /* StoreManager.swift */; };
 		B416E01925FBC699008CCF7A /* ListCharactersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B416E01825FBC699008CCF7A /* ListCharactersModel.swift */; };
-		B416E01F25FBD272008CCF7A /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B416E01E25FBD272008CCF7A /* CryptoSwift */; };
 		B416E02725FBD666008CCF7A /* DetailCharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B416E02525FBD666008CCF7A /* DetailCharacterViewController.swift */; };
 		B416E02825FBD666008CCF7A /* DetailCharacterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B416E02625FBD666008CCF7A /* DetailCharacterViewController.xib */; };
 		B416E02D25FBD8E0008CCF7A /* DetailCharacterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B416E02C25FBD8E0008CCF7A /* DetailCharacterPresenter.swift */; };
 		B416E03225FBD8EC008CCF7A /* DetailCharacterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B416E03125FBD8EC008CCF7A /* DetailCharacterRouter.swift */; };
 		B416E03725FBD93F008CCF7A /* DetailCharacterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B416E03625FBD93F008CCF7A /* DetailCharacterCoordinator.swift */; };
+		B44F9790260267DA00869A4B /* ListCharactersCVTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44F978F260267DA00869A4B /* ListCharactersCVTest.swift */; };
+		B44F979D2602693500869A4B /* ListPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44F979C2602693500869A4B /* ListPresenterMock.swift */; };
+		B44F97B2260273C800869A4B /* ListCharactersProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44F97B1260273C800869A4B /* ListCharactersProviderMock.swift */; };
+		B44F97BB26029C2800869A4B /* ListCharactersPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44F97BA26029C2800869A4B /* ListCharactersPresenterTest.swift */; };
 		B451BCC925FBAE9900D5DFE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B451BCC825FBAE9900D5DFE9 /* AppDelegate.swift */; };
 		B451BCD225FBAE9A00D5DFE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B451BCD125FBAE9A00D5DFE9 /* Assets.xcassets */; };
 		B451BCD525FBAE9A00D5DFE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B451BCD325FBAE9A00D5DFE9 /* LaunchScreen.storyboard */; };
 		B451BCE025FBAE9B00D5DFE9 /* EntelgyMarvelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B451BCDF25FBAE9B00D5DFE9 /* EntelgyMarvelTests.swift */; };
-		B451BCEB25FBAE9B00D5DFE9 /* EntelgyMarvelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B451BCEA25FBAE9B00D5DFE9 /* EntelgyMarvelUITests.swift */; };
 		B451BD0025FBB00000D5DFE9 /* AppAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B451BCFF25FBB00000D5DFE9 /* AppAssembly.swift */; };
 		B451BD0A25FBB08400D5DFE9 /* ListCharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B451BD0825FBB08400D5DFE9 /* ListCharactersViewController.swift */; };
 		B451BD0B25FBB08400D5DFE9 /* ListCharactersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B451BD0925FBB08400D5DFE9 /* ListCharactersViewController.xib */; };
@@ -30,9 +32,13 @@
 		B451BD6325FBB9D500D5DFE9 /* ListCharactersCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B451BD6225FBB9D500D5DFE9 /* ListCharactersCoordinator.swift */; };
 		B451BD7125FBBCC400D5DFE9 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B451BD7025FBBCC400D5DFE9 /* Utils.swift */; };
 		B451BD7D25FBBE2500D5DFE9 /* ListCharactersRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B451BD7C25FBBE2500D5DFE9 /* ListCharactersRouter.swift */; };
+		B487A0392604E1B600064BB3 /* ListComicsVCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B487A0382604E1B600064BB3 /* ListComicsVCTest.swift */; };
+		B487A03D2604E39D00064BB3 /* ListComicsPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B487A03C2604E39D00064BB3 /* ListComicsPresenterMock.swift */; };
+		B487A0432604E51900064BB3 /* ListComicsPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B487A0422604E51900064BB3 /* ListComicsPresenterTest.swift */; };
 		B49476A625FBF30C005751C0 /* CharacterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49476A425FBF30C005751C0 /* CharacterCollectionViewCell.swift */; };
 		B49476A725FBF30C005751C0 /* CharacterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B49476A525FBF30C005751C0 /* CharacterCollectionViewCell.xib */; };
-		B49476AD25FBF6A9005751C0 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B49476AC25FBF6A9005751C0 /* Kingfisher */; };
+		B4A5A9B626034EC7008E956A /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B4A5A9B526034EC7008E956A /* CryptoSwift */; };
+		B4A5A9BB26034ED3008E956A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B4A5A9BA26034ED3008E956A /* Kingfisher */; };
 		B4AB3A1E25FFAF07003FB027 /* HomeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AB3A1C25FFAF07003FB027 /* HomeTabBarViewController.swift */; };
 		B4AB3A1F25FFAF07003FB027 /* HomeTabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4AB3A1D25FFAF07003FB027 /* HomeTabBarViewController.xib */; };
 		B4AB3A3825FFCAFE003FB027 /* HeaderDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AB3A3625FFCAFE003FB027 /* HeaderDetailCell.swift */; };
@@ -63,13 +69,6 @@
 			remoteGlobalIDString = B451BCC425FBAE9900D5DFE9;
 			remoteInfo = EntelgyMarvel;
 		};
-		B451BCE725FBAE9B00D5DFE9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B451BCBD25FBAE9900D5DFE9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B451BCC425FBAE9900D5DFE9;
-			remoteInfo = EntelgyMarvel;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +81,10 @@
 		B416E02C25FBD8E0008CCF7A /* DetailCharacterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCharacterPresenter.swift; sourceTree = "<group>"; };
 		B416E03125FBD8EC008CCF7A /* DetailCharacterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCharacterRouter.swift; sourceTree = "<group>"; };
 		B416E03625FBD93F008CCF7A /* DetailCharacterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCharacterCoordinator.swift; sourceTree = "<group>"; };
+		B44F978F260267DA00869A4B /* ListCharactersCVTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCharactersCVTest.swift; sourceTree = "<group>"; };
+		B44F979C2602693500869A4B /* ListPresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenterMock.swift; sourceTree = "<group>"; };
+		B44F97B1260273C800869A4B /* ListCharactersProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCharactersProviderMock.swift; sourceTree = "<group>"; };
+		B44F97BA26029C2800869A4B /* ListCharactersPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCharactersPresenterTest.swift; sourceTree = "<group>"; };
 		B451BCC525FBAE9900D5DFE9 /* EntelgyMarvel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EntelgyMarvel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B451BCC825FBAE9900D5DFE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B451BCD125FBAE9A00D5DFE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -90,9 +93,6 @@
 		B451BCDB25FBAE9B00D5DFE9 /* EntelgyMarvelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EntelgyMarvelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B451BCDF25FBAE9B00D5DFE9 /* EntelgyMarvelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntelgyMarvelTests.swift; sourceTree = "<group>"; };
 		B451BCE125FBAE9B00D5DFE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B451BCE625FBAE9B00D5DFE9 /* EntelgyMarvelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EntelgyMarvelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B451BCEA25FBAE9B00D5DFE9 /* EntelgyMarvelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntelgyMarvelUITests.swift; sourceTree = "<group>"; };
-		B451BCEC25FBAE9B00D5DFE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B451BCFF25FBB00000D5DFE9 /* AppAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembly.swift; sourceTree = "<group>"; };
 		B451BD0825FBB08400D5DFE9 /* ListCharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCharactersViewController.swift; sourceTree = "<group>"; };
 		B451BD0925FBB08400D5DFE9 /* ListCharactersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCharactersViewController.xib; sourceTree = "<group>"; };
@@ -101,6 +101,9 @@
 		B451BD6225FBB9D500D5DFE9 /* ListCharactersCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCharactersCoordinator.swift; sourceTree = "<group>"; };
 		B451BD7025FBBCC400D5DFE9 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		B451BD7C25FBBE2500D5DFE9 /* ListCharactersRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCharactersRouter.swift; sourceTree = "<group>"; };
+		B487A0382604E1B600064BB3 /* ListComicsVCTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListComicsVCTest.swift; sourceTree = "<group>"; };
+		B487A03C2604E39D00064BB3 /* ListComicsPresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListComicsPresenterMock.swift; sourceTree = "<group>"; };
+		B487A0422604E51900064BB3 /* ListComicsPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListComicsPresenterTest.swift; sourceTree = "<group>"; };
 		B49476A425FBF30C005751C0 /* CharacterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCollectionViewCell.swift; sourceTree = "<group>"; };
 		B49476A525FBF30C005751C0 /* CharacterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterCollectionViewCell.xib; sourceTree = "<group>"; };
 		B4AB3A1C25FFAF07003FB027 /* HomeTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewController.swift; sourceTree = "<group>"; };
@@ -130,19 +133,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B49476AD25FBF6A9005751C0 /* Kingfisher in Frameworks */,
-				B416E01F25FBD272008CCF7A /* CryptoSwift in Frameworks */,
+				B4A5A9BB26034ED3008E956A /* Kingfisher in Frameworks */,
+				B4A5A9B626034EC7008E956A /* CryptoSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		B451BCD825FBAE9B00D5DFE9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B451BCE325FBAE9B00D5DFE9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -194,12 +190,33 @@
 			path = DetailCharacterVC;
 			sourceTree = "<group>";
 		};
+		B44F978E260267A900869A4B /* ListCharactersTest */ = {
+			isa = PBXGroup;
+			children = (
+				B44F979B2602690800869A4B /* Mocks */,
+				B44F978F260267DA00869A4B /* ListCharactersCVTest.swift */,
+				B487A0382604E1B600064BB3 /* ListComicsVCTest.swift */,
+				B44F97BA26029C2800869A4B /* ListCharactersPresenterTest.swift */,
+				B487A0422604E51900064BB3 /* ListComicsPresenterTest.swift */,
+			);
+			path = ListCharactersTest;
+			sourceTree = "<group>";
+		};
+		B44F979B2602690800869A4B /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				B44F979C2602693500869A4B /* ListPresenterMock.swift */,
+				B487A03C2604E39D00064BB3 /* ListComicsPresenterMock.swift */,
+				B44F97B1260273C800869A4B /* ListCharactersProviderMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		B451BCBC25FBAE9900D5DFE9 = {
 			isa = PBXGroup;
 			children = (
 				B451BCC725FBAE9900D5DFE9 /* EntelgyMarvel */,
 				B451BCDE25FBAE9B00D5DFE9 /* EntelgyMarvelTests */,
-				B451BCE925FBAE9B00D5DFE9 /* EntelgyMarvelUITests */,
 				B451BCC625FBAE9900D5DFE9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -209,7 +226,6 @@
 			children = (
 				B451BCC525FBAE9900D5DFE9 /* EntelgyMarvel.app */,
 				B451BCDB25FBAE9B00D5DFE9 /* EntelgyMarvelTests.xctest */,
-				B451BCE625FBAE9B00D5DFE9 /* EntelgyMarvelUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -237,19 +253,11 @@
 		B451BCDE25FBAE9B00D5DFE9 /* EntelgyMarvelTests */ = {
 			isa = PBXGroup;
 			children = (
+				B44F978E260267A900869A4B /* ListCharactersTest */,
 				B451BCDF25FBAE9B00D5DFE9 /* EntelgyMarvelTests.swift */,
 				B451BCE125FBAE9B00D5DFE9 /* Info.plist */,
 			);
 			path = EntelgyMarvelTests;
-			sourceTree = "<group>";
-		};
-		B451BCE925FBAE9B00D5DFE9 /* EntelgyMarvelUITests */ = {
-			isa = PBXGroup;
-			children = (
-				B451BCEA25FBAE9B00D5DFE9 /* EntelgyMarvelUITests.swift */,
-				B451BCEC25FBAE9B00D5DFE9 /* Info.plist */,
-			);
-			path = EntelgyMarvelUITests;
 			sourceTree = "<group>";
 		};
 		B451BCFE25FBAFEC00D5DFE9 /* Core */ = {
@@ -385,8 +393,8 @@
 			);
 			name = EntelgyMarvel;
 			packageProductDependencies = (
-				B416E01E25FBD272008CCF7A /* CryptoSwift */,
-				B49476AC25FBF6A9005751C0 /* Kingfisher */,
+				B4A5A9B526034EC7008E956A /* CryptoSwift */,
+				B4A5A9BA26034ED3008E956A /* Kingfisher */,
 			);
 			productName = EntelgyMarvel;
 			productReference = B451BCC525FBAE9900D5DFE9 /* EntelgyMarvel.app */;
@@ -406,27 +414,11 @@
 				B451BCDD25FBAE9B00D5DFE9 /* PBXTargetDependency */,
 			);
 			name = EntelgyMarvelTests;
+			packageProductDependencies = (
+			);
 			productName = EntelgyMarvelTests;
 			productReference = B451BCDB25FBAE9B00D5DFE9 /* EntelgyMarvelTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		B451BCE525FBAE9B00D5DFE9 /* EntelgyMarvelUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B451BCF525FBAE9B00D5DFE9 /* Build configuration list for PBXNativeTarget "EntelgyMarvelUITests" */;
-			buildPhases = (
-				B451BCE225FBAE9B00D5DFE9 /* Sources */,
-				B451BCE325FBAE9B00D5DFE9 /* Frameworks */,
-				B451BCE425FBAE9B00D5DFE9 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B451BCE825FBAE9B00D5DFE9 /* PBXTargetDependency */,
-			);
-			name = EntelgyMarvelUITests;
-			productName = EntelgyMarvelUITests;
-			productReference = B451BCE625FBAE9B00D5DFE9 /* EntelgyMarvelUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -444,10 +436,6 @@
 						CreatedOnToolsVersion = 12.3;
 						TestTargetID = B451BCC425FBAE9900D5DFE9;
 					};
-					B451BCE525FBAE9B00D5DFE9 = {
-						CreatedOnToolsVersion = 12.3;
-						TestTargetID = B451BCC425FBAE9900D5DFE9;
-					};
 				};
 			};
 			buildConfigurationList = B451BCC025FBAE9900D5DFE9 /* Build configuration list for PBXProject "EntelgyMarvel" */;
@@ -460,8 +448,8 @@
 			);
 			mainGroup = B451BCBC25FBAE9900D5DFE9;
 			packageReferences = (
-				B416E01D25FBD272008CCF7A /* XCRemoteSwiftPackageReference "CryptoSwift" */,
-				B49476AB25FBF6A9005751C0 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				B4A5A9B426034EC7008E956A /* XCRemoteSwiftPackageReference "CryptoSwift" */,
+				B4A5A9B926034ED3008E956A /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = B451BCC625FBAE9900D5DFE9 /* Products */;
 			projectDirPath = "";
@@ -469,7 +457,6 @@
 			targets = (
 				B451BCC425FBAE9900D5DFE9 /* EntelgyMarvel */,
 				B451BCDA25FBAE9B00D5DFE9 /* EntelgyMarvelTests */,
-				B451BCE525FBAE9B00D5DFE9 /* EntelgyMarvelUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -495,13 +482,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		B451BCD925FBAE9B00D5DFE9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B451BCE425FBAE9B00D5DFE9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -552,15 +532,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B44F97BB26029C2800869A4B /* ListCharactersPresenterTest.swift in Sources */,
+				B44F97B2260273C800869A4B /* ListCharactersProviderMock.swift in Sources */,
+				B487A0432604E51900064BB3 /* ListComicsPresenterTest.swift in Sources */,
+				B487A0392604E1B600064BB3 /* ListComicsVCTest.swift in Sources */,
+				B44F9790260267DA00869A4B /* ListCharactersCVTest.swift in Sources */,
+				B487A03D2604E39D00064BB3 /* ListComicsPresenterMock.swift in Sources */,
+				B44F979D2602693500869A4B /* ListPresenterMock.swift in Sources */,
 				B451BCE025FBAE9B00D5DFE9 /* EntelgyMarvelTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B451BCE225FBAE9B00D5DFE9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B451BCEB25FBAE9B00D5DFE9 /* EntelgyMarvelUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -571,11 +550,6 @@
 			isa = PBXTargetDependency;
 			target = B451BCC425FBAE9900D5DFE9 /* EntelgyMarvel */;
 			targetProxy = B451BCDC25FBAE9B00D5DFE9 /* PBXContainerItemProxy */;
-		};
-		B451BCE825FBAE9B00D5DFE9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B451BCC425FBAE9900D5DFE9 /* EntelgyMarvel */;
-			targetProxy = B451BCE725FBAE9B00D5DFE9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -714,6 +688,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2C7W4RF846;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				INFOPLIST_FILE = EntelgyMarvel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -721,6 +696,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.icologic.com.iOS.EntelgyMarvel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INCLUDE_PATHS = "${SRCROOT}/Stat";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -733,6 +709,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2C7W4RF846;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				INFOPLIST_FILE = EntelgyMarvel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -740,6 +717,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.icologic.com.iOS.EntelgyMarvel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INCLUDE_PATHS = "${SRCROOT}/Stat";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -789,46 +767,6 @@
 			};
 			name = Release;
 		};
-		B451BCF625FBAE9B00D5DFE9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2C7W4RF846;
-				INFOPLIST_FILE = EntelgyMarvelUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.icologic.com.iOS.EntelgyMarvelUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = EntelgyMarvel;
-			};
-			name = Debug;
-		};
-		B451BCF725FBAE9B00D5DFE9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2C7W4RF846;
-				INFOPLIST_FILE = EntelgyMarvelUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.icologic.com.iOS.EntelgyMarvelUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = EntelgyMarvel;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -859,29 +797,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B451BCF525FBAE9B00D5DFE9 /* Build configuration list for PBXNativeTarget "EntelgyMarvelUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B451BCF625FBAE9B00D5DFE9 /* Debug */,
-				B451BCF725FBAE9B00D5DFE9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B416E01D25FBD272008CCF7A /* XCRemoteSwiftPackageReference "CryptoSwift" */ = {
+		B4A5A9B426034EC7008E956A /* XCRemoteSwiftPackageReference "CryptoSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/krzyzanowskim/CryptoSwift";
+			repositoryURL = "https://github.com/krzyzanowskim/CryptoSwift.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.3.8;
 			};
 		};
-		B49476AB25FBF6A9005751C0 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+		B4A5A9B926034ED3008E956A /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 6.2.1;
@@ -890,14 +819,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B416E01E25FBD272008CCF7A /* CryptoSwift */ = {
+		B4A5A9B526034EC7008E956A /* CryptoSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B416E01D25FBD272008CCF7A /* XCRemoteSwiftPackageReference "CryptoSwift" */;
+			package = B4A5A9B426034EC7008E956A /* XCRemoteSwiftPackageReference "CryptoSwift" */;
 			productName = CryptoSwift;
 		};
-		B49476AC25FBF6A9005751C0 /* Kingfisher */ = {
+		B4A5A9BA26034ED3008E956A /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B49476AB25FBF6A9005751C0 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			package = B4A5A9B926034ED3008E956A /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
