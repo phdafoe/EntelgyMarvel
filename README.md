@@ -6,7 +6,7 @@ En este apartado implemento una arquitectura 'modelo-vista-presentador', la App 
 ### Estructura de la App
 ![Estructura proyecto](https://github.com/phdafoe/EntelgyMarvel/blob/main/EstructuraEjemplo.png)
 
-### Patrón MVP - Base MVP del proyecto
+### Base MVP del proyecto
 Dicho patron define la **BaseViewController** para los UIViewController en general, un **BasePresenter** que establece con [GENERICOS](https://swiftbycoding.dev/swift/genericos/) tanto la **ViewController** como el **Router**, que define la forma de navegación de la App y el **BaseRouter** con las posibilidades de navegación necesarias para la App.
 ~~~
 // MARK: - BaseNavigationController
@@ -71,9 +71,13 @@ class BaseRouter<P> {
     }
 }
 ~~~
+## Uso de la Api de Marvel para la App
+Se utiliza la Api de [Marvel](https://developer.marvel.com/documentation/getting_started) para realizar la App, en ella es necesario crear una cuenta para obtener la clave de Api pata poder realizar la llamadas necesarias, una vez que realizas el registro, y con las claves, se monta un StoreManager que se encargará de hacer las llamadas necesarias.
+
+### Estructura del ServiceManager
 
 
-● Definición de una arquitectura para la app desde cero.
+
 ● Creatividad para resolver los requerimientos.
 ● Calidad del código entregado (estructura y buenas prácticas).
 ● Eficiencia de la solución entregada.
