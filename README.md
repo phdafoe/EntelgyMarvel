@@ -71,6 +71,24 @@ class BaseRouter<P> {
     }
 }
 ~~~
+## Configuración de carpetas en el proyecto
+
+Fundamentalmente se modulariza cada funcionalidad nueva y se crea el Patrón MVP para cada modulo, esto permite flexibilidad en el momento de desarrollar, ya que pueden coexistir varios desarrolladores al tiempo.
+
+1. Carpetas Core
+![CarpetasCore](https://github.com/phdafoe/EntelgyMarvel/blob/main/CarpetasCore.png)
+2. Carpetas Modulos(MVP)
+![CarpetasModulos](https://github.com/phdafoe/EntelgyMarvel/blob/main/CarpetasModulos.png)
+3. Contenido Módulo
+
+## Implementación de Clean Code
+Este patrón permite separar la Interfza del Modelo de datos perfectamente, implementando los principios [SOLID](https://profile.es/blog/principios-solid-desarrollo-software-calidad/)
+
+¿Cuál es el papel del presentador?
+El [tío Bob](http://cleancoder.com/products) dice:
+
+El trabajo del **ViewModel/Presenter** es volver a empaquetar OutputData en una forma visible para la vista. **ViewModel/Presenter** contiene principalmente cadenas y banderas que la vista usa para mostrar los datos. El **ViewModel/Presenter** cargará con las cadenas correspondientes ya formateadas correctamente para el usuario. etc..
+
 ## Especificaciones
 
 ### Uso de la Api de Marvel para la App
@@ -85,29 +103,15 @@ Se utiliza la Api de [Marvel](https://developer.marvel.com/documentation/getting
 - ![StoreManager1](https://github.com/phdafoe/EntelgyMarvel/blob/main/StoreManager1.png)
 - ![StoreManager2](https://github.com/phdafoe/EntelgyMarvel/blob/main/StoreManager2.png)
 
+### Dependencias y librerías
 Se tiene en cuenta para realizar las llamadas la implementacion de [CryptoSwift](https://github.com/krzyzanowskim/CryptoSwift), para generar el respectivo hash, requisito de la Api
 
-● Creatividad para resolver los requerimientos.
-● Calidad del código entregado (estructura y buenas prácticas).
-● Eficiencia de la solución entregada.
-● Familiaridad con librerías, frameworks y plataformas de desarrollo.
+Se tiene en cuenta también la implementación de [Kingfisher](https://github.com/onevcat/Kingfisher), para cargar las imágenes.
 
-## Descripción
-Se solicita la creación de la estructura de una app que muestre un listado de los personajes Marvel y permite ver el detalle de cada uno de ellos de manera individual.
+### Instalación de dependencias (SPM)
+Se usa [Swift Package Manager](https://swift.org/package-manager/), aprovachando que el proyecto esta creado en la version de Xcode 12.3.
 
 
-1. Se hace uso de la API de [Marvel](https://developer.marvel.com/docs)
+### Implementación de Test Unitarios
+Se han construido algunos Test con XCTest
 
-3. Obtener el listado de personajes
-
-## Funcionalidad
-1. Listas el listado de personajes
-2. Navegar al detalle de un personaje concreto
-
-## Requisitos
-● Requerido usar Xcode/Android Studio.
-● Requerido utilizar Swift/Kotlin
-● Se puede hacer uso de frameworks y librerías de terceros.
-● Se valorará la implementación de tests.
-● Se valorará un correcto control de errores.
-● Total libertad para añadir cualquier funcionalidad extra que se considere.
