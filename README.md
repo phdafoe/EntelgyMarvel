@@ -4,9 +4,11 @@
 En este apartado implemento una arquitectura 'modelo-vista-presentador', la App de ejemplo es sencilla que le permite obtener desde un servicio web una lista de elementos, mostrarlas en una UITableView, además de enseñar una vista detalle del objeto seleccionado de dicha celda de la tabla, como parte del ejemplo, se utilizan tanto UItableView con UIcollectionView, y UITableViewCell como UICollectionViewCell personalizados.
 
 ### Estructura de la App
+
 ![Estructura proyecto](https://github.com/phdafoe/EntelgyMarvel/blob/main/EstructuraEjemplo.png)
 
 ### Base MVP del proyecto
+
 Dicho patron define la **BaseViewController** para los UIViewController en general, un **BasePresenter** que establece con [GENERICOS](https://swiftbycoding.dev/swift/genericos/) tanto la **ViewController** como el **Router**, que define la forma de navegación de la App y el **BaseRouter** con las posibilidades de navegación necesarias para la App.
 ~~~
 // MARK: - BaseNavigationController
@@ -75,11 +77,16 @@ class BaseRouter<P> {
 
 Fundamentalmente se modulariza cada funcionalidad nueva y se crea el Patrón MVP para cada modulo, esto permite flexibilidad en el momento de desarrollar, ya que pueden coexistir varios desarrolladores al tiempo.
 
-1. Carpetas Core
+### Carpetas Core
+
 ![CarpetasCore](https://github.com/phdafoe/EntelgyMarvel/blob/main/CarpetasCore.png)
-2. Carpetas Modulos(MVP)
+
+### Carpetas Modulos(MVP)
+
 ![CarpetasModulos](https://github.com/phdafoe/EntelgyMarvel/blob/main/CarpetasModulos.png)
-3. Contenido Módulo
+
+### Contenido Módulo
+
 ![ContenidoModulo](https://github.com/phdafoe/EntelgyMarvel/blob/main/ContenidoModulo.png)
 
 ## Implementación de Clean Code 
@@ -93,16 +100,17 @@ El trabajo del **ViewModel/Presenter** es volver a empaquetar OutputData en una 
 ## Especificaciones de la prueba
 
 ### Uso de la Api de Marvel para la App
+
 Se utiliza la Api de [Marvel](https://developer.marvel.com/documentation/getting_started) para realizar la App, en ella es necesario crear una cuenta para obtener la clave de Api pata poder realizar la llamadas necesarias, una vez que realizas el registro, y con las claves, se monta un StoreManager que se encargará de hacer las llamadas necesarias.
 
-- ![Marvel1](https://github.com/phdafoe/EntelgyMarvel/blob/main/Marvel1.png)
-- ![Marvel2](https://github.com/phdafoe/EntelgyMarvel/blob/main/Marvel2.png)
+![Marvel1](https://github.com/phdafoe/EntelgyMarvel/blob/main/Marvel1.png)
+![Marvel2](https://github.com/phdafoe/EntelgyMarvel/blob/main/Marvel2.png)
 
 ### Estructura del ServiceManager - StoreManager
 
-- ![ServiceManager](https://github.com/phdafoe/EntelgyMarvel/blob/main/ServiceManager.png)
-- ![StoreManager1](https://github.com/phdafoe/EntelgyMarvel/blob/main/StoreManager1.png)
-- ![StoreManager2](https://github.com/phdafoe/EntelgyMarvel/blob/main/StoreManager2.png)
+![ServiceManager](https://github.com/phdafoe/EntelgyMarvel/blob/main/ServiceManager.png)
+![StoreManager1](https://github.com/phdafoe/EntelgyMarvel/blob/main/StoreManager1.png)
+![StoreManager2](https://github.com/phdafoe/EntelgyMarvel/blob/main/StoreManager2.png)
 
 ### Dependencias y librerías
 Se tiene en cuenta para realizar las llamadas la implementacion de [CryptoSwift](https://github.com/krzyzanowskim/CryptoSwift), para generar el respectivo hash, requisito de la Api
