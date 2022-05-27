@@ -8,13 +8,11 @@ pipeline {
     }
   environment {
     LC_ALL = 'en_US.UTF-8'
-    APP_NAME = 'AdManagerTest'
-    BUILD_NAME = 'AdManagerTest'
-    APP_TARGET = 'AdManagerTest'
-    APP_PROJECT = 'AdManagerTest.xcodeproj'
-    APP_WORKSPACE = 'AdManagerTest.xcworkspace'
-    APP_TEST_SCHEME = 'AdManagerTest'
-    PUBLISH_TO_CHANNEL = 'teams'
+    APP_NAME = 'Marvel'
+    BUILD_NAME = 'Marvel'
+    APP_TARGET = 'Marvel'
+    APP_PROJECT = 'Marvel.xcodeproj'
+    APP_TEST_SCHEME = 'MarvelTests'
   }
   stages {
     //<< Git SCM Checkout >>
@@ -31,7 +29,7 @@ pipeline {
           if (BUILD_VARIANT == 'Debug_TestFlight') {
             echo "Debug_TestFlight"
           } else if (BUILD_VARIANT == 'Release_AppStore_TestFlight') {
-          echo "Release_AppStore_TestFlight"
+            echo "Release_AppStore_TestFlight"
           }
         }
       }
