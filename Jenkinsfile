@@ -1,7 +1,4 @@
 pipeline {
-  agent {
-    
-  }
   parameters {
     // the default choice for commit-triggered builds is the first item in the choices list
     choice(name: 'buildVariant', choices: ['Debug_Scan_Only', 'Debug_TestFlight', 'Release_AppStore_TestFlight'], description: 'The variants to build')
