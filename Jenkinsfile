@@ -45,20 +45,6 @@ pipeline {
       }
     }
 
-    stage('Unit Test cases') {
-    }
-
-    stage('Quality checks - Report') {
-      parallel {
-        stage('Linting') { }
-        stage('Code Coverage') { }
-      }
-      stage('Commit File changes') { }
-      stage('Build') { }
-      stage('Generating Artifacts') { }
-      stage('Post Build -- Actions') { }
-    }
-
     stage('error') {
       steps {
         git(url: 'https://github.com/phdafoe/EntelgyMarvel.git', branch: 'main', changelog: true, poll: true)
