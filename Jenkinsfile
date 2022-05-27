@@ -1,6 +1,6 @@
 pipeline {
   agent {
-    label 'mac-mini-slave'
+    
   }
   parameters {
     // the default choice for commit-triggered builds is the first item in the choices list
