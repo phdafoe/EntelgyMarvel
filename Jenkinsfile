@@ -1,5 +1,3 @@
-@Library('oneplatform-shared-libraries') _
-
 def skipPublishDefault = (BRANCH_NAME == "hotfix") ? true : false
 
 pipeline {
@@ -18,7 +16,7 @@ pipeline {
         stage('Prepare & Validate') {
             steps {
                 script {
-                    slack.info("*Build ${BUILD_NUMBER} started*\n<${JOB_URL}|${JOB_NAME}>", BRANCH_NAME ==~ /(test|stage|production)/)
+                    # slack.info("*Build ${BUILD_NUMBER} started*\n<${JOB_URL}|${JOB_NAME}>", BRANCH_NAME ==~ /(test|stage|production)/)
                     iOSEngine.prepare()
                 }
             }
@@ -49,21 +47,18 @@ pipeline {
     post {
         success {
             script {
-                slack.success("*Build ${BUILD_NUMBER} succeeded* :heavy_check_mark:\n<${JOB_URL}|${JOB_NAME}>",
-                              BRANCH_NAME ==~ /(test|stage|production)/)
-                slack.releaseNotification()
+                # slack.success("*Build ${BUILD_NUMBER} succeeded* :heavy_check_mark:\n<${JOB_URL}|${JOB_NAME}>", BRANCH_NAME ==~ /(test|stage|production)/)
+                # slack.releaseNotification()
             }
         }
         failure {
             script {
-                slack.error("*Build ${BUILD_NUMBER} failed* :x:\n<${JOB_URL}|${JOB_NAME}> Console:<${BUILD_URL}console|${BUILD_NUMBER}>",
-                            BRANCH_NAME ==~ /(develop|test|stage|production)/)
+                #slack.error("*Build ${BUILD_NUMBER} failed* :x:\n<${JOB_URL}|${JOB_NAME}> Console:<${BUILD_URL}console|${BUILD_NUMBER}>", BRANCH_NAME ==~ /(develop|test|stage|production)/)
             }
         }
         aborted {
             script {
-                slack.error("*Build ${BUILD_NUMBER} aborted* :x:\n<${JOB_URL}|${JOB_NAME}> Console:<${BUILD_URL}console|${BUILD_NUMBER}>",
-                            BRANCH_NAME ==~ /(develop|test|stage|production)/)
+                # slack.error("*Build ${BUILD_NUMBER} aborted* :x:\n<${JOB_URL}|${JOB_NAME}> Console:<${BUILD_URL}console|${BUILD_NUMBER}>", BRANCH_NAME ==~ /(develop|test|stage|production)/)
             }
         }
         cleanup {
