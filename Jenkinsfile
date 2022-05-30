@@ -1,51 +1,76 @@
+@Library('oneplatform-shared-libraries') _
+
+def skipPublishDefault = (BRANCH_NAME == "hotfix") ? true : false
+
 pipeline {
-  parameters {
-    // the default choice for commit-triggered builds is the first item in the choices list
-    choice(name: 'buildVariant', choices: ['Debug_Scan_Only', 'Debug_TestFlight', 'Release_AppStore_TestFlight'], description: 'The variants to build')
+    agent {
+        label 'ios'
     }
-  environment {
-    LC_ALL = 'en_US.UTF-8'
-    APP_NAME = 'Marvel'
-    BUILD_NAME = 'Marvel'
-    APP_TARGET = 'Marvel'
-    APP_PROJECT = 'Marvel.xcodeproj'
-    APP_TEST_SCHEME = 'MarvelTests'
-  }
-  stages {
-    //<< Git SCM Checkout >>
-    stage('Git Checkout') {
-      steps {
-        checkout scm
-      }
+    options {
+        disableConcurrentBuilds()
+        buildDiscarder(logRotator(numToKeepStr: '20'))
+        timeout(time: 2, unit: 'HOURS')
     }
-    stage('Update Env with Build Variant') {
-      steps {
-        script {
-          env.BUILD_VARIANT = params.buildVariant
-          // Conditionally define a build variant 'impact'
-          if (BUILD_VARIANT == 'Debug_TestFlight') {
-            echo "Debug_TestFlight"
-          } else if (BUILD_VARIANT == 'Release_AppStore_TestFlight') {
-            echo "Release_AppStore_TestFlight"
-          }
+    parameters {
+        booleanParam(defaultValue:skipPublishDefault, description:'Skip publishing - build only', name:'SKIP_PUBLISH')
+    }
+    stages {
+        stage('Prepare & Validate') {
+            steps {
+                script {
+                    slack.info("*Build ${BUILD_NUMBER} started*\n<${JOB_URL}|${JOB_NAME}>", BRANCH_NAME ==~ /(test|stage|production)/)
+                    iOSEngine.prepare()
+                }
+            }
         }
-      }
+        stage('Quality & Unit tests') {
+            steps {
+                script {
+                    iOSEngine.runTests()
+                }
+            }
+        }
+        stage('Build') {
+            steps {
+                script {
+                    iOSEngine.build()
+                }
+            }
+        }
+        stage('Publish') {
+            steps {
+                script {
+                    iOSEngine.publish()
+                }
+            }
+        }
     }
 
-    stage('Git - Fetch Version/Commits') {
-      steps {
-        script {
-          //Shell commands
-          env.GIT_COMMIT_MSG = sh(returnStdout: true, script: ''' git log -1 --pretty=%B ${GIT_COMMIT} ''').trim()
-          def DATE_TIME = sh(returnStdout: true, script: ''' date +%Y.%m.%d-%H:%M:%S ''').trim()
+    post {
+        success {
+            script {
+                slack.success("*Build ${BUILD_NUMBER} succeeded* :heavy_check_mark:\n<${JOB_URL}|${JOB_NAME}>",
+                              BRANCH_NAME ==~ /(test|stage|production)/)
+                slack.releaseNotification()
+            }
         }
-      }
+        failure {
+            script {
+                slack.error("*Build ${BUILD_NUMBER} failed* :x:\n<${JOB_URL}|${JOB_NAME}> Console:<${BUILD_URL}console|${BUILD_NUMBER}>",
+                            BRANCH_NAME ==~ /(develop|test|stage|production)/)
+            }
+        }
+        aborted {
+            script {
+                slack.error("*Build ${BUILD_NUMBER} aborted* :x:\n<${JOB_URL}|${JOB_NAME}> Console:<${BUILD_URL}console|${BUILD_NUMBER}>",
+                            BRANCH_NAME ==~ /(develop|test|stage|production)/)
+            }
+        }
+        cleanup {
+            script {
+                echo 'cleaning workspace'
+                cleanWs()
+            }
+        }
     }
-
-    stage('error') {
-      steps {
-        git(url: 'https://github.com/phdafoe/EntelgyMarvel.git', branch: 'main', changelog: true, poll: true)
-      }
-    }
-  }
 }
