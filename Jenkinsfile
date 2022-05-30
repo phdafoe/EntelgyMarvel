@@ -17,6 +17,7 @@ pipeline {
             steps {
                 script {
                     # slack.info("*Build ${BUILD_NUMBER} started*\n<${JOB_URL}|${JOB_NAME}>", BRANCH_NAME ==~ /(test|stage|production)/)
+                    echo 'Prepare & Validate'
                     iOSEngine.prepare()
                 }
             }
@@ -24,6 +25,7 @@ pipeline {
         stage('Quality & Unit tests') {
             steps {
                 script {
+                    echo 'Quality & Unit tests'
                     iOSEngine.runTests()
                 }
             }
@@ -31,6 +33,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
+                    echo 'Build'
                     iOSEngine.build()
                 }
             }
@@ -38,6 +41,7 @@ pipeline {
         stage('Publish') {
             steps {
                 script {
+                    echo 'Publish'
                     iOSEngine.publish()
                 }
             }
