@@ -16,7 +16,6 @@ pipeline {
         stage('Prepare & Validate') {
             steps {
                 script {
-                    # slack.info("*Build ${BUILD_NUMBER} started*\n<${JOB_URL}|${JOB_NAME}>", BRANCH_NAME ==~ /(test|stage|production)/)
                     echo 'Prepare & Validate'
                     iOSEngine.prepare()
                 }
@@ -51,18 +50,17 @@ pipeline {
     post {
         success {
             script {
-                # slack.success("*Build ${BUILD_NUMBER} succeeded* :heavy_check_mark:\n<${JOB_URL}|${JOB_NAME}>", BRANCH_NAME ==~ /(test|stage|production)/)
-                # slack.releaseNotification()
+                echo 'develop|test|stage|production -> success'
             }
         }
         failure {
             script {
-                #slack.error("*Build ${BUILD_NUMBER} failed* :x:\n<${JOB_URL}|${JOB_NAME}> Console:<${BUILD_URL}console|${BUILD_NUMBER}>", BRANCH_NAME ==~ /(develop|test|stage|production)/)
+              echo 'develop|test|stage|production -> failure'
             }
         }
         aborted {
             script {
-                # slack.error("*Build ${BUILD_NUMBER} aborted* :x:\n<${JOB_URL}|${JOB_NAME}> Console:<${BUILD_URL}console|${BUILD_NUMBER}>", BRANCH_NAME ==~ /(develop|test|stage|production)/)
+            echo 'develop|test|stage|production -> aborted'
             }
         }
         cleanup {
